@@ -1,0 +1,188 @@
+/* =====================================================
+CTA SECTION
+Sección destacada con gradiente azul
+===================================================== */
+
+.cta{
+
+/* Gradiente azul como en el diseño */
+background: linear-gradient(135deg, #0f2a4f, #2b6ecf);
+
+/* Bordes redondeados */
+border-radius:25px;
+
+/* Espaciado interno */
+padding: 30px 20px;
+
+
+/* Separación respecto a otras secciones */
+margin:30px 0;
+
+/* Centra el contenido */
+text-align:center;
+
+font-family: "inter", sans-serif;
+font-style: normal;
+
+}
+
+
+/* =====================================================
+CONTENIDO DEL CTA
+===================================================== */
+
+.cta-content{
+
+/* Limita el ancho del texto para mejor lectura */
+max-width:320px;
+
+/* Centra el bloque */
+margin:0 auto;
+
+}
+
+
+/* =====================================================
+TÍTULO
+===================================================== */
+
+.cta h2{
+
+font-size:22px;     /* Tamaño ideal para móvil */
+font-weight:700;
+line-height:1.3;
+color: white;
+margin-bottom:12px;
+
+
+}
+
+
+/* =====================================================
+DESCRIPCIÓN
+===================================================== */
+
+.cta p{
+
+font-size:14px;
+
+color:#d6e4ff;      /* Azul claro */
+
+margin-bottom:22px;
+
+
+
+}
+
+
+/* =====================================================
+BOTÓN CTA
+===================================================== */
+
+.cta-btn{
+
+/* Apariencia del botón */
+background:#f3f4f6;
+color:#2563eb;
+
+padding:12px 22px;
+
+border-radius:20px;
+
+font-weight:600;
+
+text-decoration:none;
+
+/* Hace que el botón se comporte como bloque */
+display:inline-block;
+
+
+
+}
+
+
+/* =====================================================
+EFECTO HOVER (desktop)
+===================================================== */
+
+.cta-btn:hover{
+
+background:#ffffff;
+
+transform:scale(1.03);
+
+transition:0.2s;
+
+}
+
+
+
+/* =====================================================
+RESPONSIVE TABLET
+Pantallas mayores a 768px
+===================================================== */
+
+@media (min-width:768px){ 
+
+.cta{
+
+padding:40px 30px;
+
+}
+
+.cta h2{
+
+font-size:28px;
+
+}
+
+.cta p{
+
+font-size:16px;
+
+}
+
+}
+
+
+
+/* =====================================================
+RESPONSIVE DESKTOP
+Pantallas mayores a 1024px
+===================================================== */
+
+@media (min-width:1024px){
+
+.cta{
+
+/* más ancho para desktop */
+max-width:900px;
+
+/* centra el bloque */
+margin:60px auto;
+
+/* padding más amplio */
+padding:60px 40px;
+
+}
+
+.cta-content{
+
+max-width:500px;
+
+}
+
+.cta h2{
+
+font-size:34px;
+
+}
+
+.cta-btn{
+
+padding:14px 28px;
+font-size:16px;
+
+}
+
+}
