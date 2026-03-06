@@ -1,0 +1,55 @@
+/* colores */
+
+:root{
+--grisClaro:#f1f5f9;
+--negroLetras:#0f172a;
+--azulTitulo:#197fe6;
+}
+
+/* HERO */
+
+.hero{
+padding:30px 20px;
+background:var(--grisClaro);
+}
+
+.titulo-hero{
+font-size:2.2rem;
+font-weight:800;
+color:var(--negroLetras);
+}
+
+.titulo-hero span{
+color:var(--azulTitulo);
+}
+
+.descripcion-hero{
+margin-top:15px;
+color:#64748b;
+font-size:1rem;
+}
+
+.hero-botones{
+margin-top:20px;
+display:flex;
+flex-direction:column;
+gap:10px;
+}
+
+/* desktop */
+
+@media (min-width:992px){
+
+.titulo-hero{
+font-size:3.5rem;
+}
+
+.hero{
+padding:80px 60px;
+}
+
+.hero-botones{
+flex-direction:row;
+}
+
+}
