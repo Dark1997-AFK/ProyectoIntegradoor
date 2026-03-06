@@ -36,6 +36,32 @@ flex-direction:column;
 gap:10px;
 }
 
+.hero-img-size{
+height:220px;
+object-fit:cover;
+}
+
+.avatars{
+display:flex;
+}
+
+.avatars img{
+width:40px;
+height:40px;
+border-radius:50%;
+border:3px solid white;
+margin-left:-10px;
+}
+
+.texto-usuarios{
+font-size:14px;
+color:#64748b;
+}
+
+.avatars img:first-child{
+margin-left:0;
+}
+
 /* desktop */
 
 @media (min-width:992px){
@@ -53,3 +79,8 @@ flex-direction:row;
 }
 
 }
+
+.hero-img-size{
+height:420px;
+}
+
