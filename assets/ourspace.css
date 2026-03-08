@@ -2,6 +2,291 @@
 CTA SECTION
 Sección destacada con gradiente azul
 ===================================================== */
+/* =====================================================
+BODY
+Define el fondo general
+===================================================== */
+
+body{
+
+background:#f3f4f6;  /* gris claro como en el diseño */
+
+padding:20px;        /* espacio alrededor de la página */
+
+}
+
+
+/* =====================================================
+SECCIÓN PRINCIPAL
+===================================================== */
+
+.spaces{
+
+/* limita el ancho máximo del contenido */
+
+max-width:1100px;
+
+/* centra el contenido horizontalmente */
+
+margin:auto;
+
+}
+
+
+
+/* =====================================================
+ENCABEZADO DE LA SECCIÓN
+===================================================== */
+
+.spaces-header{
+
+/* flexbox permite colocar elementos en fila */
+
+display:flex;
+
+/* separa título y enlace */
+
+justify-content:space-between;
+
+/* alinea verticalmente */
+
+align-items:center;
+
+/* permite que se acomoden en móvil */
+
+flex-wrap:wrap;
+
+/* espacio inferior */
+
+margin-bottom:25px;
+
+}
+
+
+/* =====================================================
+TÍTULO
+===================================================== */
+
+.spaces-header h2{
+
+font-size:26px;
+
+margin-bottom:5px;
+
+}
+
+
+/* =====================================================
+DESCRIPCIÓN
+===================================================== */
+
+.spaces-header p{
+
+color:#6b7280; /* gris */
+
+font-size:14px;
+
+}
+
+
+/* =====================================================
+LINK "VIEW ALL SPACES"
+===================================================== */
+
+.view-link{
+
+color:#2563eb;  /* azul */
+
+text-decoration:none; /* quita subrayado */
+
+font-weight:600;
+
+font-size:14px;
+
+}
+
+
+
+/* =====================================================
+GRID DE TARJETAS
+===================================================== */
+
+.spaces-grid{
+
+/* grid permite organizar tarjetas */
+
+display:grid;
+
+/* mobile first → solo 1 columna */
+
+grid-template-columns:1fr;
+
+/* espacio entre tarjetas */
+
+gap:20px;
+
+}
+
+
+
+/* =====================================================
+TARJETAS
+===================================================== */
+
+.space-card{
+
+/* necesario para posicionar el texto encima */
+
+position:relative;
+
+/* bordes redondeados */
+
+border-radius:15px;
+
+/* oculta lo que sobresale */
+
+overflow:hidden;
+
+}
+
+
+
+/* =====================================================
+IMÁGENES
+===================================================== */
+
+.space-card img{
+
+width:100%;   /* ocupa todo el ancho */
+
+height:200px; /* altura fija */
+
+object-fit:cover; /* recorta sin deformar */
+
+display:block;
+
+}
+
+
+
+/* =====================================================
+INFORMACIÓN SOBRE LA IMAGEN
+===================================================== */
+
+.card-info{
+
+/* posición sobre la imagen */
+
+position:absolute;
+
+bottom:0;
+left:0;
+
+width:100%;
+
+
+/* degradado para que el texto se lea */
+
+background:linear-gradient(
+transparent,
+rgba(0,0,0,0.7)
+);
+
+/* espacio interno */
+
+padding:15px;
+
+/* texto blanco */
+
+color:white;
+
+}
+
+
+
+/* =====================================================
+TÍTULO DE LA TARJETA
+===================================================== */
+
+.card-info h3{
+
+font-size:18px;
+
+margin-bottom:3px;
+
+}
+
+
+
+/* =====================================================
+PRECIO
+===================================================== */
+
+.card-info p{
+
+font-size:13px;
+
+color:#d1d5db;
+
+}
+
+
+
+/* =====================================================
+RESPONSIVE TABLET
+Cuando la pantalla es mayor a 768px
+===================================================== */
+
+@media (min-width:768px){
+
+.spaces-grid{
+
+/* 2 columnas */
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+
+
+/* =====================================================
+RESPONSIVE DESKTOP
+Pantallas mayores a 1024px
+===================================================== */
+
+@media (min-width:1024px){
+
+.spaces-grid{
+
+/* 3 columnas */
+
+grid-template-columns:repeat(3,1fr);
+
+}
+
+
+/* aumenta altura de imágenes */
+
+.space-card img{
+
+height:220px;
+
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
 
 .cta{
 
