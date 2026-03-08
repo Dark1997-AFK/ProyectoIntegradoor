@@ -1,34 +1,59 @@
 /* =====================================================
-CTA SECTION
-Sección destacada con gradiente azul
-===================================================== */
-/* =====================================================
-BODY
-Define el fondo general
+RESET & BASE
+Reinicia estilos por defecto del navegador
 ===================================================== */
 
-body{
+/* Aplica a todos los elementos y pseudo-elementos */
+*, *::before, *::after {
 
-background:#f3f4f6;  /* gris claro como en el diseño */
+    /* Hace que padding y border se incluyan dentro del width/height */
+    box-sizing: border-box;
 
-padding:20px;        /* espacio alrededor de la página */
+    /* Elimina márgenes por defecto del navegador */
+    margin: 0;
 
+    /* Elimina padding por defecto */
+    padding: 0;
 }
+
+
+/* Estilos base del body */
+body {
+
+    /* Color de fondo gris claro */
+    background: #f3f4f6;
+
+    /* Espacio alrededor de toda la página */
+    padding: 20px;
+
+    /* Tipografía principal */
+    font-family: "Georgia", serif;
+}
+
 
 
 /* =====================================================
 SECCIÓN PRINCIPAL
 ===================================================== */
 
-.spaces{
+.spaces {
 
-/* limita el ancho máximo del contenido */
+    /* Limita el ancho máximo del contenido */
+    max-width: 1100px;
 
-max-width:1100px;
+    /* Centra la sección horizontalmente */
+    margin: auto;
 
-/* centra el contenido horizontalmente */
+    /* Espaciado superior e inferior */
+    padding: 40px 0 20px;
+}
 
-margin:auto;
+
+/* Contenedor interno */
+.spaces-container {
+
+    /* Hace que ocupe todo el ancho disponible */
+    width: 100%;
 
 }
 
@@ -38,70 +63,191 @@ margin:auto;
 ENCABEZADO DE LA SECCIÓN
 ===================================================== */
 
-.spaces-header{
+.spaces-header {
 
-/* flexbox permite colocar elementos en fila */
+    /* Flexbox para alinear elementos en fila */
+    display: flex;
 
-display:flex;
+    /* Separa título y link hacia extremos */
+    justify-content: space-between;
 
-/* separa título y enlace */
+    /* Alinea verticalmente */
+    align-items: center;
 
-justify-content:space-between;
+    /* Permite que bajen a otra línea si no caben */
+    flex-wrap: wrap;
 
-/* alinea verticalmente */
+    /* Espacio inferior */
+    margin-bottom: 28px;
 
-align-items:center;
+    /* Espacio entre elementos cuando hacen wrap */
+    gap: 12px;
+}
 
-/* permite que se acomoden en móvil */
 
-flex-wrap:wrap;
+/* Título principal */
+.spaces-header h2 {
 
-/* espacio inferior */
+    /* Tamaño del título */
+    font-size: 28px;
 
-margin-bottom:25px;
+    /* Grosor del texto */
+    font-weight: 700;
+
+    /* Color gris oscuro */
+    color: #111827;
+
+    /* Ajusta el espacio entre letras */
+    letter-spacing: -0.5px;
+
+    /* Separación inferior */
+    margin-bottom: 6px;
+}
+
+
+/* Texto descriptivo */
+.spaces-header p {
+
+    /* Color gris */
+    color: #6b7280;
+
+    /* Tamaño pequeño */
+    font-size: 14px;
+
+    /* Fuente serif */
+    font-family: "Georgia", serif;
+
+    /* Texto en cursiva */
+    font-style: italic;
+}
+
+
+/* Enlace "View all spaces" */
+.view-link {
+
+    /* Color azul */
+    color: #2563eb;
+
+    /* Quita subrayado */
+    text-decoration: none;
+
+    /* Texto seminegrita */
+    font-weight: 600;
+
+    font-size: 14px;
+
+    /* Cambia la fuente */
+    font-family: Arial, sans-serif;
+
+    /* Espacio entre letras */
+    letter-spacing: 0.2px;
+
+    /* Animación al cambiar color */
+    transition: color 0.2s;
+
+    /* Evita salto de línea */
+    white-space: nowrap;
+}
+
+
+/* Cambio de color al pasar el mouse */
+.view-link:hover {
+
+    color: #1d4ed8;
 
 }
 
 
+
 /* =====================================================
-TÍTULO
+CARRUSEL WRAPPER (mobile only)
 ===================================================== */
 
-.spaces-header h2{
+.carousel-wrapper {
 
-font-size:26px;
-
-margin-bottom:5px;
+    /* Permite posicionar botones encima */
+    position: relative;
 
 }
 
 
-/* =====================================================
-DESCRIPCIÓN
-===================================================== */
+/* Botones de navegación (por defecto ocultos) */
+.carousel-btn {
 
-.spaces-header p{
-
-color:#6b7280; /* gris */
-
-font-size:14px;
+    display: none;
 
 }
 
 
+
 /* =====================================================
-LINK "VIEW ALL SPACES"
+ESTILOS SOLO PARA MÓVIL
 ===================================================== */
 
-.view-link{
+@media (max-width: 767px) {
 
-color:#2563eb;  /* azul */
+    .carousel-btn {
 
-text-decoration:none; /* quita subrayado */
+        /* Se muestran solo en móvil */
+        display: flex;
 
-font-weight:600;
+        /* Centra icono dentro del botón */
+        align-items: center;
+        justify-content: center;
 
-font-size:14px;
+        /* Posición absoluta respecto al wrapper */
+        position: absolute;
+
+        /* Centrado vertical */
+        top: 50%;
+        transform: translateY(-50%);
+
+        /* Encima de las tarjetas */
+        z-index: 10;
+
+        /* Tamaño del botón */
+        width: 36px;
+        height: 36px;
+
+        /* Forma circular */
+        border-radius: 50%;
+
+        /* Sin borde */
+        border: none;
+
+        /* Fondo blanco */
+        background: white;
+
+        /* Sombra */
+        box-shadow: 0 2px 10px rgba(0,0,0,0.18);
+
+        /* Cursor tipo botón */
+        cursor: pointer;
+
+        font-size: 16px;
+
+        color: #1d4ed8;
+
+        /* Animación hover */
+        transition: background 0.2s, box-shadow 0.2s;
+    }
+
+
+    /* Hover botón */
+    .carousel-btn:hover {
+
+        background: #f0f4ff;
+
+        box-shadow: 0 4px 16px rgba(0,0,0,0.22);
+
+    }
+
+
+    /* Posición botón izquierdo */
+    .carousel-btn.prev { left: -14px; }
+
+    /* Posición botón derecho */
+    .carousel-btn.next { right: -14px; }
 
 }
 
@@ -111,20 +257,33 @@ font-size:14px;
 GRID DE TARJETAS
 ===================================================== */
 
-.spaces-grid{
+.spaces-grid {
 
-/* grid permite organizar tarjetas */
+    /* Flexbox horizontal para carrusel */
+    display: flex;
 
-display:grid;
+    /* Espacio entre tarjetas */
+    gap: 20px;
 
-/* mobile first → solo 1 columna */
+    /* Permite scroll horizontal */
+    overflow-x: auto;
 
-grid-template-columns:1fr;
+    /* Hace que cada tarjeta se alinee como slide */
+    scroll-snap-type: x mandatory;
 
-/* espacio entre tarjetas */
+    /* Mejora scroll en iOS */
+    -webkit-overflow-scrolling: touch;
 
-gap:20px;
+    /* Oculta scrollbar en Firefox */
+    scrollbar-width: none;
 
+    padding-bottom: 4px;
+}
+
+
+/* Oculta scrollbar en Chrome y Safari */
+.spaces-grid::-webkit-scrollbar {
+    display: none;
 }
 
 
@@ -133,19 +292,46 @@ gap:20px;
 TARJETAS
 ===================================================== */
 
-.space-card{
+.space-card {
 
-/* necesario para posicionar el texto encima */
+    position: relative;
 
-position:relative;
+    /* Bordes redondeados */
+    border-radius: 16px;
 
-/* bordes redondeados */
+    overflow: hidden;
 
-border-radius:15px;
+    /* Cambia cursor al pasar mouse */
+    cursor: pointer;
 
-/* oculta lo que sobresale */
+    /* Sombra */
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
 
-overflow:hidden;
+    /* Animación hover */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    /* En móvil cada tarjeta ocupa todo el ancho */
+    flex: 0 0 calc(100% - 0px);
+
+    /* Snap para carrusel */
+    scroll-snap-align: start;
+}
+
+
+/* Hover tarjeta */
+.space-card:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.15);
+
+}
+
+
+/* Zoom en imagen al hover */
+.space-card:hover img {
+
+    transform: scale(1.05);
 
 }
 
@@ -155,15 +341,19 @@ overflow:hidden;
 IMÁGENES
 ===================================================== */
 
-.space-card img{
+.space-card img {
 
-width:100%;   /* ocupa todo el ancho */
+    width: 100%;
 
-height:200px; /* altura fija */
+    height: 220px;
 
-object-fit:cover; /* recorta sin deformar */
+    /* Recorta imagen sin deformar */
+    object-fit: cover;
 
-display:block;
+    display: block;
+
+    /* Animación zoom */
+    transition: transform 0.4s ease;
 
 }
 
@@ -173,259 +363,132 @@ display:block;
 INFORMACIÓN SOBRE LA IMAGEN
 ===================================================== */
 
-.card-info{
+.card-info {
 
-/* posición sobre la imagen */
+    position: absolute;
 
-position:absolute;
+    bottom: 0;
+    left: 0;
 
-bottom:0;
-left:0;
+    width: 100%;
 
-width:100%;
+    /* Degradado oscuro para leer el texto */
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.75));
+
+    padding: 30px 18px 18px;
+
+    color: white;
+
+}
 
 
-/* degradado para que el texto se lea */
+.card-info h3 {
 
-background:linear-gradient(
-transparent,
-rgba(0,0,0,0.7)
-);
+    font-size: 18px;
 
-/* espacio interno */
+    font-weight: 700;
 
-padding:15px;
+    margin-bottom: 4px;
 
-/* texto blanco */
+    letter-spacing: -0.2px;
 
-color:white;
+}
+
+
+.card-info p {
+
+    font-size: 13px;
+
+    color: #d1d5db;
+
+    font-style: italic;
 
 }
 
 
 
 /* =====================================================
-TÍTULO DE LA TARJETA
+DOTS INDICADORES (mobile)
 ===================================================== */
 
-.card-info h3{
+.carousel-dots {
 
-font-size:18px;
+    display: none;
 
-margin-bottom:3px;
+}
+
+
+@media (max-width: 767px) {
+
+    .carousel-dots {
+
+        display: flex;
+
+        justify-content: center;
+
+        gap: 8px;
+
+        margin-top: 16px;
+
+    }
+
+    .carousel-dot {
+
+        width: 8px;
+        height: 8px;
+
+        border-radius: 50%;
+
+        background: #d1d5db;
+
+        border: none;
+
+        cursor: pointer;
+
+        padding: 0;
+
+        transition: background 0.2s, transform 0.2s;
+
+    }
+
+    /* Dot activo */
+    .carousel-dot.active {
+
+        background: #2563eb;
+
+        transform: scale(1.25);
+
+    }
 
 }
 
 
 
 /* =====================================================
-PRECIO
+RESPONSIVE TABLET — vuelve a grid
 ===================================================== */
 
-.card-info p{
+@media (min-width: 768px) {
 
-font-size:13px;
+    .spaces-grid {
 
-color:#d1d5db;
+        /* Cambia de carrusel a grid */
+        display: grid;
 
-}
+        grid-template-columns: repeat(2, 1fr);
 
+        /* Quita scroll horizontal */
+        overflow-x: visible;
 
+        scroll-snap-type: none;
 
-/* =====================================================
-RESPONSIVE TABLET
-Cuando la pantalla es mayor a 768px
-===================================================== */
+    }
 
-@media (min-width:768px){
+    .space-card {
 
-.spaces-grid{
+        flex: none;
 
-/* 2 columnas */
-
-grid-template-columns:repeat(2,1fr);
-
-}
-
-}
-
-
-
-/* =====================================================
-RESPONSIVE DESKTOP
-Pantallas mayores a 1024px
-===================================================== */
-
-@media (min-width:1024px){
-
-.spaces-grid{
-
-/* 3 columnas */
-
-grid-template-columns:repeat(3,1fr);
-
-}
-
-
-/* aumenta altura de imágenes */
-
-.space-card img{
-
-height:220px;
-
-}
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-.cta{
-
-/* Gradiente azul como en el diseño */
-background: linear-gradient(135deg, #0f2a4f, #2b6ecf);
-
-/* Bordes redondeados */
-border-radius:25px;
-
-/* Espaciado interno */
-padding: 30px 20px;
-
-
-/* Separación respecto a otras secciones */
-margin:30px 0;
-
-/* Centra el contenido */
-text-align:center;
-
-font-family: "inter", sans-serif;
-font-style: normal;
-
-}
-
-
-/* =====================================================
-CONTENIDO DEL CTA
-===================================================== */
-
-.cta-content{
-
-/* Limita el ancho del texto para mejor lectura */
-max-width:320px;
-
-/* Centra el bloque */
-margin:0 auto;
-
-}
-
-
-/* =====================================================
-TÍTULO
-===================================================== */
-
-.cta h2{
-
-font-size:22px;     /* Tamaño ideal para móvil */
-font-weight:700;
-line-height:1.3;
-color: white;
-margin-bottom:12px;
-
-
-}
-
-
-/* =====================================================
-DESCRIPCIÓN
-===================================================== */
-
-.cta p{
-
-font-size:14px;
-
-color:#d6e4ff;      /* Azul claro */
-
-margin-bottom:22px;
-
-
-
-}
-
-
-/* =====================================================
-BOTÓN CTA
-===================================================== */
-
-.cta-btn{
-
-/* Apariencia del botón */
-background:#f3f4f6;
-color:#2563eb;
-
-padding:12px 22px;
-
-border-radius:20px;
-
-font-weight:600;
-
-text-decoration:none;
-
-/* Hace que el botón se comporte como bloque */
-display:inline-block;
-
-
-
-}
-
-
-/* =====================================================
-EFECTO HOVER (desktop)
-===================================================== */
-
-.cta-btn:hover{
-
-background:#ffffff;
-
-transform:scale(1.03);
-
-transition:0.2s;
-
-}
-
-
-
-/* =====================================================
-RESPONSIVE TABLET
-Pantallas mayores a 768px
-===================================================== */
-
-@media (min-width:768px){ 
-
-.cta{
-
-padding:40px 30px;
-
-}
-
-.cta h2{
-
-font-size:28px;
-
-}
-
-.cta p{
-
-font-size:16px;
-
-}
+    }
 
 }
 
@@ -433,41 +496,176 @@ font-size:16px;
 
 /* =====================================================
 RESPONSIVE DESKTOP
-Pantallas mayores a 1024px
 ===================================================== */
 
-@media (min-width:1024px){
+@media (min-width: 1024px) {
 
-.cta{
+    .spaces-grid {
 
-/* más ancho para desktop */
-max-width:900px;
+        /* 3 columnas */
+        grid-template-columns: repeat(3, 1fr);
 
-/* centra el bloque */
-margin:60px auto;
+    }
 
-/* padding más amplio */
-padding:60px 40px;
+    .space-card img {
 
-}
+        height: 240px;
 
-.cta-content{
-
-max-width:500px;
+    }
 
 }
 
-.cta h2{
 
-font-size:34px;
+
+/* =====================================================
+CTA SECTION
+===================================================== */
+
+.cta {
+
+    /* Gradiente azul */
+    background: linear-gradient(135deg, #0f2a4f 0%, #1a4a9f 50%, #2b6ecf 100%);
+
+    border-radius: 24px;
+
+    padding: 50px 28px;
+
+    margin: 36px auto 20px;
+
+    text-align: center;
+
+    max-width: 1100px;
+
+    position: relative;
+
+    overflow: hidden;
 
 }
 
-.cta-btn{
 
-padding:14px 28px;
-font-size:16px;
+/* Elementos decorativos circulares */
+.cta::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: -60px;
+    right: -60px;
+
+    width: 220px;
+    height: 220px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    pointer-events: none;
 
 }
+
+.cta::after {
+
+    content: "";
+
+    position: absolute;
+
+    bottom: -80px;
+    left: -40px;
+
+    width: 280px;
+    height: 280px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.04);
+
+    pointer-events: none;
+
+}
+
+
+/* Contenido del CTA */
+.cta-content {
+
+    max-width: 340px;
+
+    margin: 0 auto;
+
+    position: relative;
+
+    z-index: 1;
+
+}
+
+
+.cta h2 {
+
+    font-size: 24px;
+
+    font-weight: 700;
+
+    line-height: 1.3;
+
+    color: white;
+
+    margin-bottom: 14px;
+
+    letter-spacing: -0.4px;
+
+}
+
+
+.cta p {
+
+    font-size: 14px;
+
+    color: #c7dcff;
+
+    margin-bottom: 26px;
+
+    line-height: 1.6;
+
+    font-style: italic;
+
+}
+
+
+/* Botón CTA */
+.cta-btn {
+
+    background: #f3f4f6;
+
+    color: #1d4ed8;
+
+    padding: 13px 26px;
+
+    border-radius: 50px;
+
+    font-weight: 700;
+
+    font-size: 14px;
+
+    text-decoration: none;
+
+    display: inline-block;
+
+    letter-spacing: 0.2px;
+
+    transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+
+}
+
+
+/* Hover botón */
+.cta-btn:hover {
+
+    background: #ffffff;
+
+    transform: scale(1.04);
+
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 
 }
