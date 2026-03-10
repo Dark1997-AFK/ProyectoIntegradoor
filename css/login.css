@@ -1,6 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 
-h3,h1,p,a, label{
+.navbar{
+  background-color: #F8FAFC;
+  padding: 0%;
+}
+
+.logo {
+  width: 3rem;
+}
+
+.title-text{
+  font-family: "Plus Jakarta Sans", sans-serif;
+  color: black;
+}
+
+.btn-login{
+  background-color: #1D76E2;
+  color: #fff;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 0.875rem;
+  padding: 8px 16px;
+  box-shadow: 0 3px 20px rgba(29, 118, 226, 0.35);
+}
+
+h3,h1,p,a,label, span{
     font-family: 'Inter', sans-serif;
 }
 
