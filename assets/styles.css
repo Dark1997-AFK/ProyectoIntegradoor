@@ -22,45 +22,75 @@ flex-direction:column;
 }
 
 /* ================= HERO ================= */
-
-.hero{
-padding:30px 20px;
-background:var(--grisClaro);
+.hero-carousel{
+height:90vh;
 }
 
-.titulo-hero{
-font-size:2.2rem;
-font-weight:800;
-color:var(--negroLetras);
-}
-
-.titulo-hero span{
-color:var(--azulTitulo);
-}
-
-.descripcion-hero{
-margin-top:15px;
-color:#64748b;
-font-size:1rem;
-}
-
-.hero-botones{
+.hero-slide{
+height:90vh;
+background-size:cover;
+background-position:center;
+position:relative;
 display:flex;
-flex-direction:column;
-gap:12px;
-margin-top:20px;
+align-items:center;
 }
 
-.hero-botones .btn{
+.hero-overlay{
+position:absolute;
+top:0;
+left:0;
 width:100%;
-padding:14px;
-border-radius:12px;
+height:100%;
+
+background:linear-gradient(
+to top,
+rgba(0,0,0,0.65) 0%,
+rgba(0,0,0,0.25) 40%,
+rgba(0,0,0,0.05) 80%
+);
+}
+.hero-content{
+position:relative;
+z-index:2;
+color:white;
+max-width:600px;
+padding-left:80px;
 }
 
-.hero-img-size{
-height:220px;
-object-fit:cover;
+
+.hero-content h1{
+font-size:3rem;
+font-weight:700;
 }
+
+.hero-content p{
+font-size:1.2rem;
+margin-top:10px;
+}
+
+/* boton */
+
+.hero-content .btn{
+margin-top:20px;
+padding:10px 22px;
+border-radius:30px;
+}
+.carousel-item{
+display:none;
+}
+.carousel-inner{
+height:100%;
+}
+.carousel-item.active{
+display:flex;
+}
+/* flechas carrusel */
+
+.carousel-control-prev,
+.carousel-control-next{
+width:5%;
+}
+/* avatars */
 
 .avatars{
 display:flex;
@@ -80,13 +110,8 @@ margin-left:0;
 
 .texto-usuarios{
 font-size:14px;
-color:#64748b;
+opacity:0.9;
 }
-
-.hero-botones .btn-primary{
-box-shadow:0 8px 20px rgba(25,127,230,0.25);
-}
-
 /* ================= FEATURES ================= */
 
 .features{
@@ -192,7 +217,54 @@ line-height:1.4;
 
 /* ================= RESPONSIVE ================= */
 
+
+@media (max-width:390px){
+
+.hero-carousel{
+height:75vh;
+}
+
+.hero-slide{
+height:75vh;
+}
+
+.hero-content{
+padding:0 20px;
+max-width:100%;
+text-align:center;
+}
+
+.hero-content h1{
+font-size:1.9rem;
+line-height:1.2;
+}
+
+.hero-content p{
+font-size:0.95rem;
+margin-top:8px;
+}
+
+.hero-content .btn{
+margin-top:15px;
+font-size:14px;
+padding:8px 18px;
+}
+
+}
 @media (min-width:768px){
+
+.hero-content{
+padding-left:40px;
+max-width:500px;
+}
+
+.hero-content h1{
+font-size:2.4rem;
+}
+
+.hero-content p{
+font-size:1.1rem;
+}
 
 .hero-botones{
 flex-direction:row;

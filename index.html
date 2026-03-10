@@ -65,93 +65,111 @@
   </nav>
 </header>
     <!-- Fin Navbar -->
+  
+ <!-- HERO -->
+<section id="heroCarousel" class="carousel slide hero-carousel" data-bs-ride="carousel" data-bs-interval="6000">
 
+    <div class="carousel-inner">
 
-    <!-- Hero Section -->
+        <!-- slide 1 -->
+        <div class="carousel-item active hero-slide" style="background-image:url('resources/coworking.jpg')">
 
- <section class="hero container">
+            <div class="hero-overlay"></div>
 
-    <div class="row align-items-center">
+                    <div class="container hero-content">
 
-                    <!-- texto -->
-       <div class="col-12 col-lg-6 hero-text">
+                        <h1>Work Hub Coworking</h1>
 
-                    <p class="badge-open">• COWORKING</p>
+                        <p>
+                        Donde las ideas se conectan y los proyectos cobran vida. 
+                        </p>
 
-                    <h1 class="titulo-hero">
-                    Work Hub<br>
-                    <span>Donde las ideas se conectan</span>
-                    </h1>
+                        <a href="#" class="btn btn-outline-light btn-lg">
+                       Reservar ahora
+                        </a>
 
-                    <p class="descripcion-hero">
-                    Descubre espacios de coworking diseñados para ti y tu equipo de trabajo, fomentando la productividad,
-                    creatividad y conexión.
-                    </p>
-                   
-                        <!-- botones -->
-                        <div class="hero-botones">
-
-                            <a href="#" class="btn btn-primary btn-lg ">
-                            Reserva tu espacio
-                            </a>
-
-                            <a href="#" class="btn btn-light btn-lg">
-                            Explorar espacios
-                            </a>
-                        </div>
-
-
-                        <!-- AVATARS USUARIOS -->
-
-                 <div class="usuarios d-flex align-items-center mt-3">
-
-                        <div class="avatars">
-
-                        <img src="resources/usuario1.png" alt="usuario">
-                        <img src="resources/usuario2.png" alt="usuario">
-                        <img src="resources/usuario3.png" alt="usuario">
-
-                  </div>
-        
-                        <span class="ml-3 texto-usuarios">
-                        Más de 10k profesionales trabajan con nosotros
-                        </span>
-            </div>
-      </div>
-           <!-- imagen derecha con carrusel -->
-            <div class="col-12 col-lg-6 hero-img">
-
-               <div id="heroCarousel" class="carousel slide" data-ride="carousel" data-interval="3000">
-
-               
-
-                    <div class="carousel-inner rounded shadow">
-
-                        <div class="carousel-item active">
-                        <img src="resources/coworking.jpg" class="d-block w-100 hero-img-size" alt="Espacio cowork">
-                        </div>
-
-                        <div class="carousel-item">
-                        <img src="resources/coworking2.jpg" class="d-block w-100 hero-img-size" alt="Oficina compartida">
-                        </div>
-
-                        <div class="carousel-item">
-                        <img src="resources/coworking3.jpg" class="d-block w-100 hero-img-size" alt="Sala de reuniones">
-                        </div>
-
-                        <div class="carousel-item">
-                        <img src="resources/coworking4.png" class="d-block w-100 hero-img-size" alt="Espacio de trabajo">
-                        </div>
-                    
                     </div>
-               </div>
-          </div>
-      </div>
- 
 
- </section>
+        </div>
 
-    <!-- Fin Hero Section -->
+        <!-- slide 2 -->
+        <div class="carousel-item hero-slide" style="background-image:url('resources/coworking2.jpg')">
+
+            <div class="hero-overlay"></div>
+
+                <div class="container hero-content">
+
+                    <h1>Espacios diseñados para crear</h1>
+
+                    <p>
+                    Conecta con profesionales y aumenta tu productividad.
+                    </p>
+
+                    <a href="#" class="btn btn-outline-light btn-lg">
+                    Explorar
+                    </a>
+
+                </div>
+
+        </div>
+
+        <!-- slide 3 -->
+        <div class="carousel-item hero-slide" style="background-image:url('resources/coworking3.jpg')">
+
+            <div class="hero-overlay"></div>
+
+                <div class="container hero-content">
+
+                    <h1>Trabaja en comunidad</h1>
+
+                    <p>
+                    Conecta con profesionales y aumenta tu productividad.
+                    </p>
+
+                    <a href="#" class="btn btn-outline-light btn-lg">
+                    Unirse
+                    </a>
+
+                </div>
+
+            </div>
+
+    </div>
+
+<!-- flechas -->
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+        </button>
+
+</section>
+<!-- FIN HERO -->
+  
+
+  <!-- Sección de usuarios -->
+
+
+    <div class="usuarios d-flex align-items-center mt-4">
+
+            <div class="avatars">
+
+                <img src="resources/usuario1.png" alt="">
+                <img src="resources/usuario2.png" alt="">
+                <img src="resources/usuario3.png" alt="">
+
+            </div>
+
+            <span class="ms-3 texto-usuarios">
+                Más de 10k profesionales trabajan con nosotros
+            </span>
+
+    </div>
+
+ <!-- Sección de características y espacios -->
 
     <section class="features">
         <div class="stats">
@@ -251,7 +269,7 @@
             <a href="#" class="cta-btn">Get Started Today</a>
         </div>
     </section>
-
+  
     <hr>
     <br>
 
@@ -343,6 +361,7 @@
             </div>
         </div>
     </footer>
+    <!--Fin footer-->    
 
       <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
