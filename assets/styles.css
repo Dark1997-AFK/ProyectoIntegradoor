@@ -9,8 +9,8 @@
     background:#f3f5f7;
     display:flex;
     justify-content:center;
-    padding:60px 20px;
     flex-direction: column;
+    padding: 0;
     }
     
     .features{
