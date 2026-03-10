@@ -1,0 +1,5 @@
+# Configuración personal del editor
+.vscode/
+
+# Por si alguien usa Mac (crea archivos ocultos automáticamente)
+.DS_Store
