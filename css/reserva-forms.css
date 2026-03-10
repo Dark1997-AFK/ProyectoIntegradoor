@@ -1,0 +1,65 @@
+/* --- index.css --- */
+
+/* 1. Fondo general (opcional, para resaltar la tarjeta) */
+body {
+    background-color: #f8fafc; /* Gris muy suave */
+    font-family: 'Inter', sans-serif;
+}
+
+/* 2. La Tarjeta (Card) con estética de image_3.png */
+.card {
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb !important; /* Gris plata suave */
+    border-radius: 1.5rem !important; /* Bordes de 25px aprox */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03) !important;
+}
+
+/* 3. Título Principal */
+h2 {
+    color: #1a202c; /* Carbón oscuro corporativo */
+    letter-spacing: -0.5px;
+}
+
+/* 4. Etiquetas de los campos */
+.form-label {
+    color: #4b5563; /* Gris profesional */
+    font-weight: 500;
+}
+
+/* 5. Estilo de los Inputs, Selects y Time (Fondo f9fafb como image_2.png) */
+.form-control, .form-select {
+    border: 1px solid #e5e7eb;
+    background-color: #f9fafb;
+    padding: 0.75rem 1rem;
+    color: #1a202c;
+    transition: all 0.2s ease;
+}
+
+.form-control:focus, .form-select:focus {
+    background-color: #ffffff;
+    border-color: #0047AB; /* Azul Cobalto corporativo */
+    box-shadow: 0 0 0 4px rgba(0, 71, 171, 0.1);
+    outline: none;
+}
+
+/* 6. Botón de Confirmación (Azul Cobalto de tus diseños) */
+.btn-primary {
+    background-color: #0047AB !important;
+    border: none !important;
+    font-weight: 700;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-primary:hover {
+    background-color: #003a8c !important;
+    transform: translateY(-1px);
+}
+
+.btn-confirm:active {
+    transform: translateY(0);
+}
+
+/* 7. Separador sutil */
+hr {
+    border-top: 1px solid #e5e7eb;
+}
