@@ -23,9 +23,6 @@ body {
     /* Color de fondo gris claro */
     background: #f3f4f6;
 
-    /* Espacio alrededor de toda la página */
-    padding: 20px;
-
     /* Tipografía principal */
     font-family: "Georgia", serif;
 }
@@ -74,8 +71,7 @@ ENCABEZADO DE LA SECCIÓN
     /* Alinea verticalmente */
     align-items: center;
 
-    /* Permite que bajen a otra línea si no caben */
-    flex-wrap: wrap;
+   
 
     /* Espacio inferior */
     margin-bottom: 28px;
@@ -167,6 +163,7 @@ CARRUSEL WRAPPER (mobile only)
 
     /* Permite posicionar botones encima */
     position: relative;
+    
 
 }
 
@@ -531,6 +528,8 @@ CTA SECTION
     padding: 50px 28px;
 
     margin: 36px auto 20px;
+
+    width: 95%;
 
     text-align: center;
 
