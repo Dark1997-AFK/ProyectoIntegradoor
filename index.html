@@ -1,124 +1,224 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="assets/ourspace.css">
     <link rel="stylesheet" href="assets/footer.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light shadow-sm py-1 py-md-1 py-lg-2">
+            <div class="container">
+                <img class="logo d-inline-block align-top" src="./assets/Logo.png" alt="Logo WorkHub Coworking">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto mr-3 mr-md-4 mr-lg-5">
+                        <li class="nav-item mx-0 mx-md-1 mx-lg-2">
+                            <a class="nav-link" href="#">Espacios</a>
+                        </li>
+                        <li class="nav-item mx-0 mx-md-1 mx-lg-2">
+                            <a class="nav-link" href="#">Precios</a>
+                        </li>
+                        <li class="nav-item mx-0 mx-md-1 mx-lg-2">
+                            <a class="nav-link" href="#">Conócenos</a>
+                        </li>
+                    </ul>
+                    <a href="" class="btn btn-login mr-2">Iniciar sesión</a>
+                    <a href="" class="btn btn-signup">Registrarse</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="features">
+        <div class="stats">
+            <div class="stat">
+                <h2 class="counter" data-target="25">0</h2>
+                <p>LOCATIONS</p>
+            </div>
+            <div class="stat">
+                <h2 class="counter" data-target="10000">0</h2>
+                <p>MEMBERS</p>
+            </div>
+            <div class="stat">
+                <h2 class="counter" data-target="99">0</h2>
+                <p>SATISFACTION</p>
+            </div>
+        </div>
+        <div class="section-title">
+            <h1>Everything you need to succeed</h1>
+            <p>Our spaces are equipped with premium amenities to help you focus on what matters most.</p>
+        </div>
+        <div class="cards">
+            <div class="card">
+                <div class="icon"><i class="fa-solid fa-wifi"></i></div>
+                <div class="card-text">
+                    <h3>High-Speed Wi-Fi</h3>
+                    <p>Enterprise-grade fiber internet connectivity throughout the building.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="icon"><i class="fa-solid fa-users"></i></div>
+                <div class="card-text">
+                    <h3>Private Meeting Rooms</h3>
+                    <p>Fully equipped spaces for team collaborations and client pitches.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="icon"><i class="fa-solid fa-mug-hot"></i></div>
+                <div class="card-text">
+                    <h3>Bottomless Coffee</h3>
+                    <p>Stay fueled all day with our premium selection of artisan roasts.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="spaces">
+        <div class="spaces-container">
+            <div class="spaces-header">
+                <div>
+                    <h2>Our Spaces</h2>
+                    <p>Choose the environment that fits your workflow.</p>
+                </div>
+                <a href="#" class="view-link">View all spaces &rsaquo;</a>
+            </div>
+            <div class="carousel-wrapper">
+                <button class="carousel-btn prev" aria-label="Anterior">&#8592;</button>
+                <div class="spaces-grid" id="spacesGrid">
+                    <div class="space-card">
+                        <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=800&q=80" alt="Dedicated Desks">
+                        <div class="card-info">
+                            <h3>Dedicated Desks</h3>
+                            <p>Starting at $299/mo</p>
+                        </div>
+                    </div>
+                    <div class="space-card">
+                        <img src="https://images.unsplash.com/photo-1604328698692-f76ea9498e76?w=800&q=80" alt="Private Offices">
+                        <div class="card-info">
+                            <h3>Private Offices</h3>
+                            <p>Starting at $899/mo</p>
+                        </div>
+                    </div>
+                    <div class="space-card">
+                        <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=800&q=80" alt="Hot Desking">
+                        <div class="card-info">
+                            <h3>Hot Desking</h3>
+                            <p>Starting at $149/mo</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-btn next" aria-label="Siguiente">&#8594;</button>
+                <div class="carousel-dots">
+                    <button class="carousel-dot active" data-index="0"></button>
+                    <button class="carousel-dot" data-index="1"></button>
+                    <button class="carousel-dot" data-index="2"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="cta-content">
+            <h2>Ready to transform the way you work?</h2>
+            <p>Join our thriving community of creatives and entrepreneurs today.</p>
+            <a href="#" class="cta-btn">Get Started Today</a>
+        </div>
+    </section>
+
     <hr>
-  <br>
-  <footer>
-    <div class="container-fluid">
-      <div class="footer-brand">
-        <div id="titulo" class="logo">
-          <img id="imagen-logo" src="assets/logo.jpg" alt="CoWork Logo" class="logo-image">
-          <h2> CoWork</h2>
-        </div><br>
-        <p id="parrafito">Espacios premium para la optimización del trabajo, diseñados para inspirar la innovación y
-          optimizar el
-          crecimiento de la comunidad.</p>
-        <div id="social-icons" class="social-icons d-flex justify-content-center gap-3">
-          <a href="#" class="social-link">
-            <i class="bi bi-globe"></i>
-          </a>
-
-          <a href="#" class="social-link">
-            <i class="bi bi-browser-chrome"></i>
-          </a>
-
-          <a href="#" class="social-link">
-            <i class="bi bi-at"></i>
-          </a>
-        </div>
-      </div>
-      <br>
-      <br>
-      <div class="footer-links">
-        <div id="futer" class="container text-center">
-          <div class="row">
-            <div class="col-6 col-md-3">
-              <h4>Company</h4><br>
-              <ul id="lista">
-                <li>About us</li>
-                <li>Careers</li>
-                <li>Press</li>
-
-              </ul>
-            </div>
-            <div class="col-6 col-md-3">
-              <h4>Product</h4><br>
-              <ul id="listad">
-                <li>Pricing</li>
-                <li>Locations</li>
-                <li>Amenities</li>
-
-              </ul>
-            </div>
-            <div class="col-6 col-md-3">
-              <h4 class="dos">Suport</h4><br>
-              <ul class="listonga">
-                <li>Contact Us</li>
-                <li>Help Center</li>
-                <li>Privacy Policy</li>
-
-              </ul>
-            </div>
-            <div class="col-6 col-md-3">
-              <h4 class="dos">Our page</h4><br>
-              <ul class="listonga">
-                <li>Dark Mode</li>
-
-                <li>Member Benefits</li>
-                <li>Terms of Service</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <br>
-      <hr>
-      <p class="copyright">© 2024 CoWork Spaces Inc...</p>
-    </div>
     <br>
-    <hr>
-    <div class="Navegar-sitio-footer">
-      <div id="navegar-sitio" class="container-fluid">
-        <div class="row">
-          <div class="col-3">
-            <a href="#">
-              <i id="home" class="bi bi-house-door" ft></i><br>
-              Inicio</a>
-          </div>
-          <div class="col-3">
-            <a href="#">
-              <i id="search" class="bi bi-search ft"></i><br>
-              Explorar</a>
-          </div>
-          <div class="col-3">
-            <a href="#">
-              <i id="calendar" class="bi bi-calendar-check ft"></i><br>
-              Reservas</a>
-          </div>
-          <div class="col-3">
-            <a href="#">
-              <i id="profile" class="bi bi-person ft"></i><br>
-              Perfil</a>
-          </div>
+    <footer>
+        <div class="container-fluid">
+            <div class="footer-brand">
+                <div id="titulo" class="logo">
+                    <img id="imagen-logo" src="assets/logo.jpg" alt="CoWork Logo" class="logo-image">
+                    <h2>CoWork</h2>
+                </div><br>
+                <p id="parrafito">Espacios premium para la optimización del trabajo, diseñados para inspirar la innovación y optimizar el crecimiento de la comunidad.</p>
+                <div id="social-icons" class="social-icons d-flex justify-content-center gap-3">
+                    <a href="#" class="social-link"><i class="bi bi-globe"></i></a>
+                    <a href="#" class="social-link"><i class="bi bi-browser-chrome"></i></a>
+                    <a href="#" class="social-link"><i class="bi bi-at"></i></a>
+                </div>
+            </div>
+            <br><br>
+            <div class="footer-links">
+                <div id="futer" class="container text-center">
+                    <div class="row">
+                        <div class="col-6 col-md-3">
+                            <h4>Company</h4><br>
+                            <ul id="lista">
+                                <li>About us</li>
+                                <li>Careers</li>
+                                <li>Press</li>
+                            </ul>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <h4>Product</h4><br>
+                            <ul id="listad">
+                                <li>Pricing</li>
+                                <li>Locations</li>
+                                <li>Amenities</li>
+                            </ul>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <h4 class="dos">Suport</h4><br>
+                            <ul class="listonga">
+                                <li>Contact Us</li>
+                                <li>Help Center</li>
+                                <li>Privacy Policy</li>
+                            </ul>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <h4 class="dos">Our page</h4><br>
+                            <ul class="listonga">
+                                <li>Dark Mode</li>
+                                <li>Member Benefits</li>
+                                <li>Terms of Service</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <hr>
+            <p class="copyright">© 2024 CoWork Spaces Inc...</p>
         </div>
-      </div>
-    </div>
-  </footer>
+        <br>
+        <hr>
+        <div class="Navegar-sitio-footer">
+            <div id="navegar-sitio" class="container-fluid">
+                <div class="row">
+                    <div class="col-3">
+                        <a href="#"><i id="home" class="bi bi-house-door"></i><br>Inicio</a>
+                    </div>
+                    <div class="col-3">
+                        <a href="#"><i id="search" class="bi bi-search"></i><br>Explorar</a>
+                    </div>
+                    <div class="col-3">
+                        <a href="#"><i id="calendar" class="bi bi-calendar-check"></i><br>Reservas</a>
+                    </div>
+                    <div class="col-3">
+                        <a href="#"><i id="profile" class="bi bi-person"></i><br>Perfil</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-    crossorigin="anonymous"></script>
-
+    <script src="assets/scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
-<link rel="stylesheet" href="assets/scripts.js">
 </html>
