@@ -1,0 +1,55 @@
+.body{
+    background-color: #e2e8f0 ;
+}
+#parrafito{
+    font-size: 14px;
+    color: #4a5568;
+    text-align: center;
+}
+#titulo{
+    text-align: center;
+}
+#futer{text-align: center;}
+#lista, #listad {
+    display: flex;
+    flex-direction: column; /* Para que sigan estando uno abajo del otro */
+    gap: 8px;             /* Controla el espacio exacto entre cada fila */
+    list-style: none;
+    padding: 0;
+text-align: left;
+margin: 0;
+padding-bottom: 2rem;
+}
+#social-icons a{
+    
+    color: #4a5568;       /* El gris claro de la imagen */
+  text-decoration: none
+}
+#navegar-sitio a{color: #4a5568;       /* El gris claro de la imagen */
+  text-decoration: none
+}
+.copyright {
+  font-size: 12px;           /* Tamaño pequeño, tipico de pie de página */
+  color: #a0aec0;            /* Un gris claro (puedes usar #adb5bd también) */
+  text-align: center;        /* Centrado horizontalmente */
+  font-weight: 400;          /* Que no esté en negrita, que sea fino */
+}
+.col-3{display: flex;
+    flex-direction: column; /* Apila el icono sobre el texto */
+    align-items: center;}
+#imagen-logo{
+    height: 70px;
+    width:70px
+}
+.logo{display: flex;
+    flex-direction: row;
+    align-items: center;
+justify-content: center;}
+
+.listonga{
+    display: flex;
+    flex-direction: column; /* Para que sigan estando uno abajo del otro */
+    gap: 8px;             /* Controla el espacio exacto entre cada fila */
+    list-style: none;
+    padding: 0;
+text-align: left;}
