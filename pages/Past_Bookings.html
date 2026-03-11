@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Bookings</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="../css/Past_Bookings.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-top">
+            <button class="menu-btn" onclick="toggleMenu()">
+         <nav class="navbar">
+    <div class="nav-top">
+        <button class="menu-btn" onclick="toggleMenu()">
+            <i data-lucide="menu"></i>
+        </button>
+        
+        <h1 class="nav-title">My Bookings</h1>
+
+        <div class="main-menu" id="mobileMenu">
+            <a href="#"><i data-lucide="home"></i> Inicio</a>
+            <a href="#"><i data-lucide="calendar"></i> Reservas</a>
+            <a href="#"><i data-lucide="settings"></i> Ajustes</a>
+        </div>
+        
+        <div class="user-avatar"></div>
+    </div>
+    
+   <div class="container mt-5">
+  <ul class="nav nav-custom">
+    <li class="nav-item">
+      <a id="navi" class="nav-link" href="My_Bookings.html">Proximas reservas</a>
+    </li>
+    <li class="nav-item">
+      <a id="navito" class="nav-link active" href="Past_Bookings.html">Reservas pasadas</a>
+    </li>
+  </ul>
+</div>
+
+</nav>
+<br>
+<br>
+
+<H3 id="no-bookings">No tienes reservas pasadas aún...</H3>
+
+
+
+<script>
+        // Inicializar iconos
+        lucide.createIcons();
+
+        // Función para abrir/cerrar menú
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
