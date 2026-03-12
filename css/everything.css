@@ -1,37 +1,37 @@
-.everything-container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 80px 20px;
-  }
+.features{
+  width: 87.69%;
+display:flex;
+justify-content:center;
+}
   
   /* ==============================
      Statistics
   ================================ */
+
   
   .features__stats {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    display: flex;
     margin-bottom: 60px;
   }
   
   .stat {
-    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
     background-color:var(--color-white);
     border-radius: 12px;
     border: 1px solid #e6e6e6;
   }
   
   .stat__label {
-    display: block;
-    font-size: 14px;
+    font-size: 10px;
     color: var(--color-gray-1);
     margin-bottom: 8px;
   }
   
   .stat__value {
-    font-size: 28px;
-    font-weight: 700;
+    color: var(--color-primary);
   }
   
   /* ==============================
