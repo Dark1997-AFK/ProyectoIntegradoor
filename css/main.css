@@ -1,0 +1,61 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background: var(--color-bg-card);
+display:flex;
+flex-direction:column;
+padding-top: 72px;
+}
+
+:root{
+
+/* ===== Colores principales ===== */
+
+--color-dark: #0F172A;      /* Figma: 0F172A */
+--color-primary: #1D76E2;   /* Figma: 1D76E2 */
+--color-white: #FFFFFF;     /* Figma: FFFFFF */
+
+
+/* ===== Grises ===== */
+
+--color-gray-1: #64748B;    /* Figma: 64748B */
+--color-gray-2: #94A3B8;    /* Figma: 94A3B8 */
+--color-gray-3: #475569;    /* Figma: 475569 */
+
+
+/* ===== Fondos ===== */
+
+--color-bg-soft: #E2E8F0;   /* Figma: E2E8F0 */
+--color-bg-light: #F1F5F9;  /* Figma: F1F5F9 */
+--color-bg-card: #F8FAFC;   /* Figma: F8FAFC */
+
+
+/* ===== Azules claros ===== */
+
+--color-blue-soft: #DBEAFE; /* Figma: DBEAFE */
+--color-blue-light: #EFF6FF;/* Figma: EFF6FF */
+
+
+/* ===== Bordes ===== */
+
+--color-border: #CBD5E1;    /* Figma: CBD5E1 */
+
+
+/* ===== Transparencias ===== */
+
+--white-90: rgba(255,255,255,0.9);  /* Figma: FFFFFF 90% */
+--white-50: rgba(255,255,255,0.5);  /* Figma: F1F5F9 50% */
+--white-10: rgba(255,255,255,0.1);  /* Figma: FFFFFF 10% */
+--white-02: rgba(255,255,255,0.02); /* Figma: FFFFFF 0.2% */
+
+
+/* ===== Azul transparente ===== */
+
+--blue-20: rgba(29,118,226,0.2);    /* Figma: 1D76E2 20% */
+
+}
