@@ -80,12 +80,6 @@ ENCABEZADO DE LA SECCIÓN
 
     /* Tamaño pequeño */
     font-size: 14px;
-
-    /* Fuente serif */
-    font-family: "Georgia", serif;
-
-    /* Texto en cursiva */
-    font-style: italic;
 }
 
 
@@ -93,27 +87,17 @@ ENCABEZADO DE LA SECCIÓN
 .view-link {
 
     /* Color azul */
-    color: var(color-primary);
+    color: var(--color-primary);
 
     /* Quita subrayado */
     text-decoration: none;
-
-    /* Texto seminegrita */
-    font-weight: 600;
-
-    font-size: 14px;
-
-    /* Cambia la fuente */
-    font-family: Arial, sans-serif;
-
-    /* Espacio entre letras */
-    letter-spacing: 0.2px;
 
     /* Animación al cambiar color */
     transition: color 0.2s;
 
     /* Evita salto de línea */
     white-space: nowrap;
+    
 }
 
 
@@ -366,8 +350,6 @@ INFORMACIÓN SOBRE LA IMAGEN
 
     color: #d1d5db;
 
-    font-style: italic;
-
 }
 
 
@@ -592,8 +574,6 @@ CTA SECTION
     margin-bottom: 26px;
 
     line-height: 1.6;
-
-    font-style: italic;
 
 }
 
