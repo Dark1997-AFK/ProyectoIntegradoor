@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/navbar.css">
     <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="css/everything.css">
     <link rel="stylesheet" href="assets/ourspace.css">
     <link rel="stylesheet" href="assets/footer.css">
     <!-- Iconos -->
@@ -172,48 +173,123 @@
  <!-- Sección de características y espacios -->
 
     <section class="features">
-        <div class="stats">
+        <div class="container">
+          
+          <!-- Statistics -->
+          <div class="features__stats">
+
             <div class="stat">
-                <h2 class="counter" data-target="25">0</h2>
-                <p>LOCATIONS</p>
+              <span class="stat__label">
+                Global Locations
+              </span>
+
+              <h2
+                class="stat__value counter"
+                data-target="25"
+              >
+                25
+              </h2>
             </div>
+
             <div class="stat">
-                <h2 class="counter" data-target="10000">0</h2>
-                <p>MEMBERS</p>
+              <span class="stat__label">
+                Active Members
+              </span>
+
+              <h2
+                class="stat__value counter"
+                data-target="10000"
+              >
+                10000
+              </h2>
             </div>
+
             <div class="stat">
-                <h2 class="counter" data-target="99">0</h2>
-                <p>SATISFACTION</p>
+              <span class="stat__label">
+                Satisfaction Rate
+              </span>
+
+              <h2
+                class="stat__value counter"
+                data-target="99"
+              >
+                99%
+              </h2>
             </div>
+
+          </div>
+
+          <!-- Title -->
+          <div class="features__header">
+
+            <h2 class="features__title">
+              Everything you need to succeed
+            </h2>
+
+            <p class="features__description">
+              Our spaces are equipped with premium amenities to help you
+              focus on what matters most to your business.
+            </p>
+
+          </div>
+
+          <!-- Feature Cards -->
+          <div class="features__cards">
+
+            <article class="card">
+
+              <div class="card__icon">
+                <i class="fa-solid fa-wifi"></i>
+              </div>
+
+              <h3 class="card__title">
+                High-Speed Wi-Fi
+              </h3>
+
+              <p class="card__text">
+                Enterprise-grade fiber internet connectivity throughout
+                the building.
+              </p>
+
+            </article>
+
+            <article class="card">
+
+              <div class="card__icon">
+                <i class="fa-solid fa-users"></i>
+              </div>
+
+              <h3 class="card__title">
+                Private Meeting Rooms
+              </h3>
+
+              <p class="card__text">
+                Fully equipped spaces for team collaborations and
+                client pitches.
+              </p>
+
+            </article>
+
+            <article class="card">
+
+              <div class="card__icon">
+                <i class="fa-solid fa-mug-hot"></i>
+              </div>
+
+              <h3 class="card__title">
+                Bottomless Coffee
+              </h3>
+
+              <p class="card__text">
+                Stay fueled all day with our premium selection of
+                artisan roasts.
+              </p>
+
+            </article>
+
+          </div>
         </div>
-        <div class="section-title">
-            <h1>Everything you need to succeed</h1>
-            <p>Our spaces are equipped with premium amenities to help you focus on what matters most.</p>
-        </div>
-        <div class="cards">
-            <div class="card">
-                <div class="icon"><i class="fa-solid fa-wifi"></i></div>
-                <div class="card-text">
-                    <h3>High-Speed Wi-Fi</h3>
-                    <p>Enterprise-grade fiber internet connectivity throughout the building.</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="icon"><i class="fa-solid fa-users"></i></div>
-                <div class="card-text">
-                    <h3>Private Meeting Rooms</h3>
-                    <p>Fully equipped spaces for team collaborations and client pitches.</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="icon"><i class="fa-solid fa-mug-hot"></i></div>
-                <div class="card-text">
-                    <h3>Bottomless Coffee</h3>
-                    <p>Stay fueled all day with our premium selection of artisan roasts.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+      </section>
 
     <section class="spaces">
         <div class="spaces-container">
@@ -291,7 +367,7 @@
             
             <div class="col-12 col-lg-3 text-center text-lg-start mb-4">
                 <div class="d-flex align-items-center justify-content-center justify-content-lg-start mb-3">
-                    <img src="./assets/Logo.png" alt="CoWork Logo" class="logo-img me-2" style="width: 45px; height: 45px;">
+                    <img src="assets/Logo.png" alt="CoWork Logo" class="logo-img me-2" style="width: 45px; height: 45px;">
                     <h2 class="h4 fw-bold mb-0">CoWork</h2>
                 </div>
                 <p id="parrafito" class="text-muted small mb-3 description-text" style="text-align: justify;">
