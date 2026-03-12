@@ -11,6 +11,7 @@ body{
 background:#f3f5f7;
 display:flex;
 flex-direction:column;
+padding-top: 72px;
 }
 
 /* VARIABLES DE COLOR (tuyas) */
@@ -19,98 +20,6 @@ flex-direction:column;
 --grisClaro:#f1f5f9;
 --negroLetras:#0f172a;
 --azulTitulo:#197fe6;
-}
-
-/* ================= HERO ================= */
-.hero-carousel{
-height:90vh;
-}
-
-.hero-slide{
-height:90vh;
-background-size:cover;
-background-position:center;
-position:relative;
-display:flex;
-align-items:center;
-}
-
-.hero-overlay{
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
-
-background:linear-gradient(
-to top,
-rgba(0,0,0,0.65) 0%,
-rgba(0,0,0,0.25) 40%,
-rgba(0,0,0,0.05) 80%
-);
-}
-.hero-content{
-position:relative;
-z-index:2;
-color:white;
-max-width:600px;
-padding-left:80px;
-}
-
-
-.hero-content h1{
-font-size:3rem;
-font-weight:700;
-}
-
-.hero-content p{
-font-size:1.2rem;
-margin-top:10px;
-}
-
-/* boton */
-
-.hero-content .btn{
-margin-top:20px;
-padding:10px 22px;
-border-radius:30px;
-}
-.carousel-item{
-display:none;
-}
-.carousel-inner{
-height:100%;
-}
-.carousel-item.active{
-display:flex;
-}
-/* flechas carrusel */
-
-.carousel-control-prev,
-.carousel-control-next{
-width:5%;
-}
-/* avatars */
-
-.avatars{
-display:flex;
-}
-
-.avatars img{
-width:40px;
-height:40px;
-border-radius:50%;
-border:3px solid white;
-margin-left:-10px;
-}
-
-.avatars img:first-child{
-margin-left:0;
-}
-
-.texto-usuarios{
-font-size:14px;
-opacity:0.9;
 }
 /* ================= FEATURES ================= */
 
