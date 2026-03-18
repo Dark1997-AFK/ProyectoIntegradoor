@@ -8,11 +8,154 @@
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../assets/styles.css">
     <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/cards.css">
     <title>Space</title>
 </head>
 <body>
     
+    <!-- Grid -->
+  <main class="grid-section">
+    <div class="cards-grid" id="cardsGrid">
 
+      <!-- Card 1 -->
+      <article class="card" data-type="private">
+        <div class="card__image-wrap">
+          <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80" alt="Executive Suite 402" class="card__img" />
+          <span class="card__badge card__badge--available">Disponible hoy</span>
+          <button class="card__fav" aria-label="Guardar">&#9825;</button>
+        </div>
+        <div class="card__body">
+          <div class="card__top">
+            <div>
+              <h2 class="card__title">Executive Suite 402</h2>
+              <p class="card__meta">Oficina Privada &bull; 4 Personas</p>
+            </div>
+            <div class="card__price"><span class="card__amount">$45</span><span class="card__unit">/hr</span></div>
+          </div>
+          <ul class="card__amenities">
+            <li><span class="icon">&#x1F4F6;</span> Alta velocidad</li>
+            <li><span class="icon">&#x2615;</span> Bebidas gratis</li>
+            <li><span class="icon">&#x1F5A8;</span> Impresión</li>
+          </ul>
+          <button class="card__btn">Reservar espacio</button>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="card" data-type="hot-desk">
+        <div class="card__image-wrap">
+          <img src="https://images.unsplash.com/photo-1604328698692-f76ea9498e76?w=600&q=80" alt="Open Area Desk 12" class="card__img" />
+          <button class="card__fav" aria-label="Guardar">&#9825;</button>
+        </div>
+        <div class="card__body">
+          <div class="card__top">
+            <div>
+              <h2 class="card__title">Open Area Desk 12</h2>
+              <p class="card__meta">Hot Desk &bull; 1 Persona</p>
+            </div>
+            <div class="card__price"><span class="card__amount">$5</span><span class="card__unit">/hr</span></div>
+          </div>
+          <ul class="card__amenities">
+            <li><span class="icon">&#x1F5A8;</span> Impresión</li>
+            <li><span class="icon">&#x26A1;</span> Carga rápida</li>
+          </ul>
+          <button class="card__btn">Reservar espacio</button>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="card" data-type="meeting">
+        <div class="card__image-wrap">
+          <img src="https://images.unsplash.com/photo-1431540015161-0bf868a2d407?w=600&q=80" alt="Conference Room B" class="card__img" />
+          <button class="card__fav" aria-label="Guardar">&#9825;</button>
+        </div>
+        <div class="card__body">
+          <div class="card__top">
+            <div>
+              <h2 class="card__title">Conference Room B</h2>
+              <p class="card__meta">Sala de reunión &bull; 10 Personas</p>
+            </div>
+            <div class="card__price"><span class="card__amount">$80</span><span class="card__unit">/hr</span></div>
+          </div>
+          <ul class="card__amenities">
+            <li><span class="icon">&#x1F4F9;</span> Video conf.</li>
+            <li><span class="icon">&#x1F4CA;</span> Kit presentación</li>
+          </ul>
+          <button class="card__btn">Reservar espacio</button>
+        </div>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="card" data-type="pod">
+        <div class="card__image-wrap">
+          <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&q=80" alt="Solo Pod 05" class="card__img" />
+          <span class="card__badge card__badge--popular">Más popular</span>
+          <button class="card__fav" aria-label="Guardar">&#9825;</button>
+        </div>
+        <div class="card__body">
+          <div class="card__top">
+            <div>
+              <h2 class="card__title">Solo Pod 05</h2>
+              <p class="card__meta">Oficina Privada &bull; 1 Persona</p>
+            </div>
+            <div class="card__price"><span class="card__amount">$15</span><span class="card__unit">/hr</span></div>
+          </div>
+          <ul class="card__amenities">
+            <li><span class="icon">&#x1F50A;</span> Insonorizado</li>
+            <li><span class="icon">&#x1F4A1;</span> Luz ajustable</li>
+          </ul>
+          <button class="card__btn">Reservar espacio</button>
+        </div>
+      </article>
+
+      <!-- Card 5 -->
+      <article class="card" data-type="private">
+        <div class="card__image-wrap">
+          <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=600&q=80" alt="Team Office 101" class="card__img" />
+          <button class="card__fav" aria-label="Guardar">&#9825;</button>
+        </div>
+        <div class="card__body">
+          <div class="card__top">
+            <div>
+              <h2 class="card__title">Team Office 101</h2>
+              <p class="card__meta">Oficina Privada &bull; 6 Personas</p>
+            </div>
+            <div class="card__price"><span class="card__amount">$60</span><span class="card__unit">/hr</span></div>
+          </div>
+          <ul class="card__amenities">
+            <li><span class="icon">&#x1F5A5;</span> Pantalla</li>
+            <li><span class="icon">&#x2744;</span> Clima</li>
+          </ul>
+          <button class="card__btn">Reservar espacio</button>
+        </div>
+      </article>
+
+      <!-- Card 6 -->
+      <article class="card" data-type="hot-desk">
+        <div class="card__image-wrap">
+          <img src="https://images.unsplash.com/photo-1600508774634-4e11d34730e2?w=600&q=80" alt="Lounge Hot Desk" class="card__img" />
+          <button class="card__fav" aria-label="Guardar">&#9825;</button>
+        </div>
+        <div class="card__body">
+          <div class="card__top">
+            <div>
+              <h2 class="card__title">Lounge Hot Desk</h2>
+              <p class="card__meta">Hot Desk &bull; 1 Persona</p>
+            </div>
+            <div class="card__price"><span class="card__amount">$4</span><span class="card__unit">/hr</span></div>
+          </div>
+          <ul class="card__amenities">
+            <li><span class="icon">&#x1F91B;</span> Zona tranquila</li>
+            <li><span class="icon">&#x2615;</span> Café incluido</li>
+          </ul>
+          <button class="card__btn">Reservar espacio</button>
+        </div>
+      </article>
+
+    </div>
+  </main>
+  
+  
 
 
     <footer class="footer-custom">
@@ -76,7 +219,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    
+    <script src="../js/cards.js"></script>
 
 
 
