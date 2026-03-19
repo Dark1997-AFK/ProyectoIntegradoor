@@ -1,0 +1,148 @@
+.features{
+  width: 87.69%;
+display:flex;
+justify-content:center;
+}
+  
+  /* ==============================
+     Statistics
+  ================================ */
+
+  
+  .features__stats {
+    display: flex;
+    margin-bottom: 60px;
+  }
+  
+  .stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    background-color:var(--color-white);
+    border-radius: 12px;
+    border: 1px solid #e6e6e6;
+  }
+  
+  .stat__label {
+    font-size: 10px;
+    color: var(--color-gray-1);
+    margin-bottom: 8px;
+  }
+  
+  .stat__value {
+    color: var(--color-primary);
+  }
+  
+  /* ==============================
+     Section Header
+  ================================ */
+  
+  .features__header {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  
+  .features__title {
+    font-size: 36px;
+    margin-bottom: 15px;
+  }
+  
+  .features__description {
+    max-width: 520px;
+    margin: 0 auto;
+    color: var(--color-gray-1);
+  }
+  
+  /* ==============================
+     Cards
+  ================================ */
+  
+  .features__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+  }
+  
+  .card {
+    padding: 30px;
+    background-color: var(--color-white);
+    border-radius: 14px;
+    border: 1px solid #e6e6e6;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+  }
+  
+  .card__icon {
+    width: 45px;
+    height: 45px;
+    margin-bottom: 15px;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    border-radius: 10px;
+    background-color: var(--color-blue-soft);
+  
+    font-size: 20px;
+    color: var(--color-primary);
+  }
+  
+  .card__title {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .card__text {
+    font-size: 14px;
+    color: var(--color-gray-1);
+  }
+  
+  /* ==============================
+     Responsive Design
+  ================================ */
+  
+  /* Tablet */
+  
+  @media (max-width: 900px) {
+    .features__stats {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+    }
+  
+    .features__cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .features__title {
+      font-size: 30px;
+    }
+  }
+  
+  /* Mobile */
+  
+  @media (max-width: 600px) {
+    .features__stats {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+    }
+  
+    .features__cards {
+      grid-template-columns: 1fr;
+    }
+  
+    .everything-container {
+      padding: 60px 20px;
+    }
+  
+    .features__title {
+      font-size: 26px;
+    }
+  }

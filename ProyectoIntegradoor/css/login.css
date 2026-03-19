@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+.navbar{
+  background-color: #F8FAFC;
+  padding: 0%;
+}
+
+.logo {
+  width: 3rem;
+}
+
+.title-text{
+  font-family: "Plus Jakarta Sans", sans-serif;
+  color: black;
+}
+
+.btn-login{
+  background-color: #1D76E2;
+  color: #fff;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 0.875rem;
+  padding: 8px 16px;
+  box-shadow: 0 3px 20px rgba(29, 118, 226, 0.35);
+}
+
+h3,h1,p,a,label, span{
+    font-family: 'Inter', sans-serif;
+}
+
+
+    main{
+        width: 87.7%;
+        margin-bottom: 32px;
+    }
+
+    main h3{
+        color: #64748B;
+    }
+
+    section{
+        width: 87.7%;
+        margin-top: 32px;
+        margin-bottom: 40px;
+    }
+
+    section h2{
+        color: #1E293B;
+    }
+
+    img {
+        width: 40px;
+    }
+
+    .form-container {
+        width: 87.7%;
+        margin: 0 auto;
+    }
+
+    .form-input-icon-email{
+        position: relative;
+    }
+
+    .form-input-icon-email i{
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #94A3B8;
+    }
+
+    .form-input-icon-email input{
+    padding-left: 40px;
+    }   
+
+    .form-input-icon-email input::placeholder{
+        color: #94A3B8;
+        font-weight: 400;
+        font-size: 1rem;
+    }
+
+    .form-input-icon-password{
+    position: relative;
+    }
+
+    .form-input-icon-password input::placeholder{
+    color: #94A3B8;
+    font-weight: 400;
+    font-size: 1.5rem;
+    }
+
+.form-input-icon-password i.bi-lock{
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94A3B8;
+}
+
+.form-input-icon-password input{
+  padding-left: 44px;   /* espacio para el icono izquierdo */
+}
+
+.form-input-icon-password .toggle-eye{
+  position: absolute;
+  left: 130px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 0;
+  background: transparent;
+  padding: 0;
+  color: #94A3B8;
+  cursor: pointer;
+}
+
+    .form-control {
+        padding-top: 17px;
+        padding-bottom: 17px;
+        background-color: #F8FAFC;
+    }
+
+
+    form label{
+        color: #334155;
+    }
+
+    form a{
+        color: #1D76E2;
+        font-size: 0.75rem;
+    }
+
+    .form-check{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .form-check-input{
+        width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    }
+
+    form button{
+        width: 100%;
+        background-color: #1D76E2;
+        border: none;
+        color: #fff;
+    }
+
+    .divider {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #64748B;
+        font-weight: medium;
+        font-size: 12px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .divider::before,
+    .divider::after{
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #E2E8F0;
+    }
+
+    .divider span{
+    padding: 0 12px;
+    }
+
+    .social-login{
+        justify-content: space-between;
+    }
+
+    .google-btn, .github-btn{
+        width: 47.7%;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        padding: 14px 41px;
+        border: 1px solid #E2E8F0;
+        background-color: #fff;
+        color: #334155;
+        font-weight: 500;
+    }
+
+    .create-account{
+        justify-content: space-between;
+    }
+
+    .create-account-text{
+        color: #64748B;
+        font-size: 1rem;
+    }

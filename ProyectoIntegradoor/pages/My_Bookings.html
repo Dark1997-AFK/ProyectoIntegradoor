@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Bookings</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="../css/My_Bookings.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-top">
+            <button class="menu-btn" onclick="toggleMenu()">
+         <nav class="navbar">
+    <div class="nav-top">
+        <button class="menu-btn" onclick="toggleMenu()">
+            <i data-lucide="menu"></i>
+        </button>
+        
+        <h1 class="nav-title">My Bookings</h1>
+
+        <div class="main-menu" id="mobileMenu">
+            <a href="#"><i data-lucide="home"></i> Inicio</a>
+            <a href="#"><i data-lucide="calendar"></i> Reservas</a>
+            <a href="#"><i data-lucide="settings"></i> Ajustes</a>
+        </div>
+        
+        <div class="user-avatar"></div>
+    </div><p id="pe">Manage your upcoming and past coworking space bookings.</p>
+    
+   <div class="container mt-5">
+  <ul class="nav nav-custom">
+    <li class="nav-item">
+      <a class="nav-link active" href="#">
+        Proximas reservas <span class="badge-count">5</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="Past_Bookings.html">Reservas pasadas</a>
+    </li>
+  </ul>
+</div>
+</nav>
+<br>
+<br>
+
+    <main class="cards-container">
+        <div class="card">
+            <div class="card-header">
+                <span class="badge">Confirmada</span>
+                <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600" alt="Room">
+            </div>
+            <div class="card-body">
+                <h2>Sala de conferencias A59</h2>
+                <p class="room-id">ID: CE-92831</p>
+                <div class="info-row"><i data-lucide="calendar"></i> Jueves 24, Marzo, 2026</div>
+                <div class="info-row"><i data-lucide="clock"></i> 09:00 AM - 11:00 AM (2 Horas)</div>
+                <div class="info-row"><i data-lucide="map-pin"></i> Piso 4, Ala Oeste</div>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-modify"><i data-lucide="pencil"></i> Modificar</button>
+                <button class="btn btn-cancel"><i data-lucide="circle-x"></i> Cancelar</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <span class="badge">Confirmada</span>
+                <img src="https://images.unsplash.com/photo-1431540015161-0bf868a2d407?q=80&w=1000&auto=format&fit=crop" alt="Room">
+            </div>
+            <div class="card-body">
+                <h2>Sala de conferencias H7</h2>
+                <p class="room-id">ID: CO-92831</p>
+                <div class="info-row"><i data-lucide="calendar"></i> Viernes 25, Marzo, 2026</div>
+                <div class="info-row"><i data-lucide="clock"></i> 09:00 AM - 09:45 AM (45 Minutos)</div>
+                <div class="info-row"><i data-lucide="map-pin"></i> Piso subterraneo</div>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-modify"><i data-lucide="pencil"></i> Modificar</button>
+                <button class="btn btn-cancel"><i data-lucide="circle-x"></i> Cancelar</button>
+            </div>
+        </div><div class="card">
+            <div class="card-header">
+                <span class="badge">Confirmada</span>
+                <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=1000&auto=format&fit=crop" alt="Room">
+            </div>
+            <div class="card-body">
+                <h2>Estudio Loft</h2>
+                <p class="room-id">ID: CS-11405</p>
+                <div class="info-row"><i data-lucide="calendar"></i> Lunes, Abril 06, 2026</div>
+                <div class="info-row"><i data-lucide="clock"></i> 02:00 PM - 04:30 PM (2.5 Horas)</div>
+                <div class="info-row"><i data-lucide="map-pin"></i> Piso 5, Terraza Norte</div>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-modify"><i data-lucide="pencil"></i> Modificar</button>
+                <button class="btn btn-cancel"><i data-lucide="circle-x"></i> Cancelar</button>
+            </div>
+        </div><div class="card">
+            <div class="card-header">
+                <span class="badge">Por confirmar</span>
+                <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=1000&auto=format&fit=crop" alt="Room">
+            </div>
+            <div class="card-body">
+                <h2>Sala de Juntas VIP</h2>
+                <p class="room-id">ID: BR-88210</p>
+                <div class="info-row"><i data-lucide="calendar"></i> Miercoles, 15 de Abril, 2026</div>
+                <div class="info-row"><i data-lucide="clock"></i>10:00 AM - 12:00 PM (2 Horas)</div>
+                <div class="info-row"><i data-lucide="map-pin"></i> Piso 1, Ala Este</div>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-modify"><i data-lucide="pencil"></i> Modificar</button>
+                <button class="btn btn-cancel"><i data-lucide="circle-x"></i> Cancelar</button>
+            </div>
+        </div><div class="card">
+            <div class="card-header">
+                <span class="badge">Confirmada</span>
+                <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=1000&auto=format&fit=crop" alt="Room">
+            </div>
+            <div class="card-body">
+                <h2>Espacio de Enfoque</h2>
+                <p class="room-id">ID: FP-33019</p>
+                <div class="info-row"><i data-lucide="calendar"></i> Abril 01, 02 y 03, 2026</div>
+                <div class="info-row"><i data-lucide="clock"></i> Todo el día</div>
+                <div class="info-row"><i data-lucide="map-pin"></i> Piso 3, Ala Oeste</div>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-modify"><i data-lucide="pencil"></i> Modificar</button>
+                <button class="btn btn-cancel"><i data-lucide="circle-x"></i> Cancelar</button>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Inicializar iconos
+        lucide.createIcons();
+
+        // Función para abrir/cerrar menú
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
