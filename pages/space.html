@@ -1,231 +1,832 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../assets/styles.css">
-    <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="../css/cards.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/aside.css" />
+    <link rel="stylesheet" href="../assets/styles.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="../css/cards.css" />
     <title>Space</title>
-</head>
-<body>
-    
-    <!-- Grid -->
-  <main class="grid-section">
-    <div class="cards-grid" id="cardsGrid">
+  </head>
 
-      <!-- Card 1 -->
-      <article class="card" data-type="private">
-        <div class="card__image-wrap">
-          <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80" alt="Executive Suite 402" class="card__img" />
-          <span class="card__badge card__badge--available">Disponible hoy</span>
-          <button class="card__fav" aria-label="Guardar">&#9825;</button>
-        </div>
-        <div class="card__body">
-          <div class="card__top">
-            <div>
-              <h2 class="card__title">Executive Suite 402</h2>
-              <p class="card__meta">Oficina Privada &bull; 4 Personas</p>
-            </div>
-            <div class="card__price"><span class="card__amount">$45</span><span class="card__unit">/hr</span></div>
+  <body>
+    <div class="spaces-layout">
+      <!-- Aside desktop -->
+      <aside class="filters-panel bg-white border-end p-4 d-none d-lg-block">
+        <h4 class="fw-bold mb-4">Filters</h4>
+
+        <!-- When -->
+        <section class="filter-block pb-4 mb-4 border-bottom">
+          <h6 class="fw-bold mb-3">When</h6>
+
+          <div class="mb-3">
+            <label
+              for="date"
+              class="form-label small fw-semibold text-secondary"
+            >
+              Date
+            </label>
+            <input type="date" id="date" class="form-control custom-control" />
           </div>
-          <ul class="card__amenities">
-            <li><span class="icon">&#x1F4F6;</span> Alta velocidad</li>
-            <li><span class="icon">&#x2615;</span> Bebidas gratis</li>
-            <li><span class="icon">&#x1F5A8;</span> Impresión</li>
-          </ul>
-          <button class="card__btn">Reservar espacio</button>
-        </div>
-      </article>
 
-      <!-- Card 2 -->
-      <article class="card" data-type="hot-desk">
-        <div class="card__image-wrap">
-          <img src="https://images.unsplash.com/photo-1604328698692-f76ea9498e76?w=600&q=80" alt="Open Area Desk 12" class="card__img" />
-          <button class="card__fav" aria-label="Guardar">&#9825;</button>
-        </div>
-        <div class="card__body">
-          <div class="card__top">
-            <div>
-              <h2 class="card__title">Open Area Desk 12</h2>
-              <p class="card__meta">Hot Desk &bull; 1 Persona</p>
-            </div>
-            <div class="card__price"><span class="card__amount">$5</span><span class="card__unit">/hr</span></div>
+          <div class="mb-3">
+            <label
+              for="startTime"
+              class="form-label small fw-semibold text-secondary"
+            >
+              Start time
+            </label>
+            <select id="startTime" class="form-select custom-control">
+              <option selected>09:00 AM</option>
+              <option>10:00 AM</option>
+              <option>11:00 AM</option>
+              <option>12:00 PM</option>
+            </select>
           </div>
-          <ul class="card__amenities">
-            <li><span class="icon">&#x1F5A8;</span> Impresión</li>
-            <li><span class="icon">&#x26A1;</span> Carga rápida</li>
-          </ul>
-          <button class="card__btn">Reservar espacio</button>
-        </div>
-      </article>
 
-      <!-- Card 3 -->
-      <article class="card" data-type="meeting">
-        <div class="card__image-wrap">
-          <img src="https://images.unsplash.com/photo-1431540015161-0bf868a2d407?w=600&q=80" alt="Conference Room B" class="card__img" />
-          <button class="card__fav" aria-label="Guardar">&#9825;</button>
-        </div>
-        <div class="card__body">
-          <div class="card__top">
-            <div>
-              <h2 class="card__title">Conference Room B</h2>
-              <p class="card__meta">Sala de reunión &bull; 10 Personas</p>
-            </div>
-            <div class="card__price"><span class="card__amount">$80</span><span class="card__unit">/hr</span></div>
+          <div>
+            <label
+              for="duration"
+              class="form-label small fw-semibold text-secondary"
+            >
+              Duration
+            </label>
+            <select id="duration" class="form-select custom-control">
+              <option selected>2 hours</option>
+              <option>1 hour</option>
+              <option>3 hours</option>
+              <option>Half day</option>
+              <option>Full day</option>
+            </select>
           </div>
-          <ul class="card__amenities">
-            <li><span class="icon">&#x1F4F9;</span> Video conf.</li>
-            <li><span class="icon">&#x1F4CA;</span> Kit presentación</li>
-          </ul>
-          <button class="card__btn">Reservar espacio</button>
-        </div>
-      </article>
+        </section>
 
-      <!-- Card 4 -->
-      <article class="card" data-type="pod">
-        <div class="card__image-wrap">
-          <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&q=80" alt="Solo Pod 05" class="card__img" />
-          <span class="card__badge card__badge--popular">Más popular</span>
-          <button class="card__fav" aria-label="Guardar">&#9825;</button>
-        </div>
-        <div class="card__body">
-          <div class="card__top">
-            <div>
-              <h2 class="card__title">Solo Pod 05</h2>
-              <p class="card__meta">Oficina Privada &bull; 1 Persona</p>
-            </div>
-            <div class="card__price"><span class="card__amount">$15</span><span class="card__unit">/hr</span></div>
+        <!-- Space type -->
+        <section class="filter-block pb-4 mb-4 border-bottom">
+          <h6 class="fw-bold mb-3">Space type</h6>
+          <div class="d-flex flex-wrap gap-2">
+            <button type="button" class="btn filter-chip active">
+              Hot Desk
+            </button>
+            <button type="button" class="btn filter-chip">
+              Private Office
+            </button>
+            <button type="button" class="btn filter-chip">Meeting Room</button>
+            <button type="button" class="btn filter-chip">Lounge</button>
           </div>
-          <ul class="card__amenities">
-            <li><span class="icon">&#x1F50A;</span> Insonorizado</li>
-            <li><span class="icon">&#x1F4A1;</span> Luz ajustable</li>
-          </ul>
-          <button class="card__btn">Reservar espacio</button>
-        </div>
-      </article>
+        </section>
 
-      <!-- Card 5 -->
-      <article class="card" data-type="private">
-        <div class="card__image-wrap">
-          <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=600&q=80" alt="Team Office 101" class="card__img" />
-          <button class="card__fav" aria-label="Guardar">&#9825;</button>
-        </div>
-        <div class="card__body">
-          <div class="card__top">
-            <div>
-              <h2 class="card__title">Team Office 101</h2>
-              <p class="card__meta">Oficina Privada &bull; 6 Personas</p>
-            </div>
-            <div class="card__price"><span class="card__amount">$60</span><span class="card__unit">/hr</span></div>
+        <!-- Capacity -->
+        <section class="filter-block pb-4 mb-4 border-bottom">
+          <h6 class="fw-bold mb-3">Capacity</h6>
+          <div class="d-flex flex-wrap gap-2">
+            <button type="button" class="btn filter-chip">1 person</button>
+            <button type="button" class="btn filter-chip">2–4</button>
+            <button type="button" class="btn filter-chip">5–10</button>
+            <button type="button" class="btn filter-chip">10+</button>
           </div>
-          <ul class="card__amenities">
-            <li><span class="icon">&#x1F5A5;</span> Pantalla</li>
-            <li><span class="icon">&#x2744;</span> Clima</li>
-          </ul>
-          <button class="card__btn">Reservar espacio</button>
-        </div>
-      </article>
+        </section>
 
-      <!-- Card 6 -->
-      <article class="card" data-type="hot-desk">
-        <div class="card__image-wrap">
-          <img src="https://images.unsplash.com/photo-1600508774634-4e11d34730e2?w=600&q=80" alt="Lounge Hot Desk" class="card__img" />
-          <button class="card__fav" aria-label="Guardar">&#9825;</button>
-        </div>
-        <div class="card__body">
-          <div class="card__top">
-            <div>
-              <h2 class="card__title">Lounge Hot Desk</h2>
-              <p class="card__meta">Hot Desk &bull; 1 Persona</p>
+        <!-- Amenities -->
+        <section class="filter-block pb-4 mb-4 border-bottom">
+          <h6 class="fw-bold mb-3">Amenities</h6>
+
+          <div class="row g-3 amenities-grid">
+            <div class="col-6">
+              <div class="custom-check">
+                <input
+                  class="form-check-input custom-check-input"
+                  type="checkbox"
+                  id="wifi"
+                />
+                <label class="form-check-label custom-check-label" for="wifi">
+                  WiFi rápido
+                </label>
+              </div>
             </div>
-            <div class="card__price"><span class="card__amount">$4</span><span class="card__unit">/hr</span></div>
-          </div>
-          <ul class="card__amenities">
-            <li><span class="icon">&#x1F91B;</span> Zona tranquila</li>
-            <li><span class="icon">&#x2615;</span> Café incluido</li>
-          </ul>
-          <button class="card__btn">Reservar espacio</button>
-        </div>
-      </article>
 
+            <div class="col-6">
+              <div class="custom-check">
+                <input
+                  class="form-check-input custom-check-input"
+                  type="checkbox"
+                  id="monitor"
+                />
+                <label
+                  class="form-check-label custom-check-label"
+                  for="monitor"
+                >
+                  Monitor
+                </label>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div class="custom-check">
+                <input
+                  class="form-check-input custom-check-input"
+                  type="checkbox"
+                  id="whiteboard"
+                />
+                <label
+                  class="form-check-label custom-check-label"
+                  for="whiteboard"
+                >
+                  Pizarra
+                </label>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div class="custom-check">
+                <input
+                  class="form-check-input custom-check-input"
+                  type="checkbox"
+                  id="coffee"
+                />
+                <label class="form-check-label custom-check-label" for="coffee">
+                  Café
+                </label>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div class="custom-check">
+                <input
+                  class="form-check-input custom-check-input"
+                  type="checkbox"
+                  id="video"
+                />
+                <label class="form-check-label custom-check-label" for="video">
+                  Videoconferencia
+                </label>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div class="custom-check">
+                <input
+                  class="form-check-input custom-check-input"
+                  type="checkbox"
+                  id="air"
+                />
+                <label class="form-check-label custom-check-label" for="air">
+                  Aire acondicionado
+                </label>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div class="custom-check">
+                <input
+                  class="form-check-input custom-check-input"
+                  type="checkbox"
+                  id="light"
+                />
+                <label class="form-check-label custom-check-label" for="light">
+                  Luz ajustable
+                </label>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div class="custom-check">
+                <input
+                  class="form-check-input custom-check-input"
+                  type="checkbox"
+                  id="soundproof"
+                />
+                <label
+                  class="form-check-label custom-check-label"
+                  for="soundproof"
+                >
+                  Soundproof
+                </label>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Price -->
+        <section class="filter-block pb-4 mb-4 border-bottom">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h6 class="fw-bold mb-0">Price</h6>
+            <span class="text-primary fw-semibold">$80/hr</span>
+          </div>
+
+          <input
+            type="range"
+            class="form-range custom-range"
+            min="0"
+            max="100"
+            value="80"
+          />
+
+          <div class="row g-2 mt-2">
+            <div class="col-6">
+              <input
+                type="number"
+                class="form-control custom-control"
+                placeholder="Min"
+              />
+            </div>
+            <div class="col-6">
+              <input
+                type="number"
+                class="form-control custom-control"
+                placeholder="Max"
+              />
+            </div>
+          </div>
+        </section>
+
+        <!-- Actions -->
+        <div class="d-grid gap-2">
+          <button type="button" class="btn btn-light custom-secondary-btn">
+            Clear filters
+          </button>
+          <button type="button" class="btn btn-primary custom-primary-btn">
+            Apply filters
+          </button>
+        </div>
+      </aside>
+
+      <!-- Grid -->
+      <main class="grid-section">
+        <!-- Toolbar móvil -->
+        <div
+          class="mobile-toolbar d-flex d-lg-none justify-content-between align-items-center px-3 py-3"
+        >
+          <p class="mb-0 fw-semibold">6 spaces available</p>
+          <button
+            class="btn btn-outline-primary mobile-filter-btn"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#mobileFilters"
+            aria-controls="mobileFilters"
+          >
+            <i class="bi bi-sliders me-2"></i>Filters
+          </button>
+        </div>
+
+        <div class="cards-grid" id="cardsGrid">
+          <!-- Card 1 -->
+          <article class="card" data-type="private">
+            <div class="card__image-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80"
+                alt="Executive Suite 402"
+                class="card__img"
+              />
+              <span class="card__badge card__badge--available">
+                Disponible hoy
+              </span>
+              <button class="card__fav" aria-label="Guardar">&#9825;</button>
+            </div>
+            <div class="card__body">
+              <div class="card__top">
+                <div>
+                  <h2 class="card__title">Executive Suite 402</h2>
+                  <p class="card__meta">Oficina Privada &bull; 4 Personas</p>
+                </div>
+                <div class="card__price">
+                  <span class="card__amount">$45</span
+                  ><span class="card__unit">/hr</span>
+                </div>
+              </div>
+              <ul class="card__amenities">
+                <li><span class="icon">&#x1F4F6;</span> Alta velocidad</li>
+                <li><span class="icon">&#x2615;</span> Bebidas gratis</li>
+                <li><span class="icon">&#x1F5A8;</span> Impresión</li>
+              </ul>
+              <button class="card__btn">Reservar espacio</button>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="card" data-type="hot-desk">
+            <div class="card__image-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1604328698692-f76ea9498e76?w=600&q=80"
+                alt="Open Area Desk 12"
+                class="card__img"
+              />
+              <button class="card__fav" aria-label="Guardar">&#9825;</button>
+            </div>
+            <div class="card__body">
+              <div class="card__top">
+                <div>
+                  <h2 class="card__title">Open Area Desk 12</h2>
+                  <p class="card__meta">Hot Desk &bull; 1 Persona</p>
+                </div>
+                <div class="card__price">
+                  <span class="card__amount">$5</span
+                  ><span class="card__unit">/hr</span>
+                </div>
+              </div>
+              <ul class="card__amenities">
+                <li><span class="icon">&#x1F5A8;</span> Impresión</li>
+                <li><span class="icon">&#x26A1;</span> Carga rápida</li>
+              </ul>
+              <button class="card__btn">Reservar espacio</button>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="card" data-type="meeting">
+            <div class="card__image-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1431540015161-0bf868a2d407?w=600&q=80"
+                alt="Conference Room B"
+                class="card__img"
+              />
+              <button class="card__fav" aria-label="Guardar">&#9825;</button>
+            </div>
+            <div class="card__body">
+              <div class="card__top">
+                <div>
+                  <h2 class="card__title">Conference Room B</h2>
+                  <p class="card__meta">Sala de reunión &bull; 10 Personas</p>
+                </div>
+                <div class="card__price">
+                  <span class="card__amount">$80</span
+                  ><span class="card__unit">/hr</span>
+                </div>
+              </div>
+              <ul class="card__amenities">
+                <li><span class="icon">&#x1F4F9;</span> Video conf.</li>
+                <li><span class="icon">&#x1F4CA;</span> Kit presentación</li>
+              </ul>
+              <button class="card__btn">Reservar espacio</button>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="card" data-type="pod">
+            <div class="card__image-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&q=80"
+                alt="Solo Pod 05"
+                class="card__img"
+              />
+              <span class="card__badge card__badge--popular">
+                Más popular
+              </span>
+              <button class="card__fav" aria-label="Guardar">&#9825;</button>
+            </div>
+            <div class="card__body">
+              <div class="card__top">
+                <div>
+                  <h2 class="card__title">Solo Pod 05</h2>
+                  <p class="card__meta">Oficina Privada &bull; 1 Persona</p>
+                </div>
+                <div class="card__price">
+                  <span class="card__amount">$15</span
+                  ><span class="card__unit">/hr</span>
+                </div>
+              </div>
+              <ul class="card__amenities">
+                <li><span class="icon">&#x1F50A;</span> Insonorizado</li>
+                <li><span class="icon">&#x1F4A1;</span> Luz ajustable</li>
+              </ul>
+              <button class="card__btn">Reservar espacio</button>
+            </div>
+          </article>
+
+          <!-- Card 5 -->
+          <article class="card" data-type="private">
+            <div class="card__image-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=600&q=80"
+                alt="Team Office 101"
+                class="card__img"
+              />
+              <button class="card__fav" aria-label="Guardar">&#9825;</button>
+            </div>
+            <div class="card__body">
+              <div class="card__top">
+                <div>
+                  <h2 class="card__title">Team Office 101</h2>
+                  <p class="card__meta">Oficina Privada &bull; 6 Personas</p>
+                </div>
+                <div class="card__price">
+                  <span class="card__amount">$60</span
+                  ><span class="card__unit">/hr</span>
+                </div>
+              </div>
+              <ul class="card__amenities">
+                <li><span class="icon">&#x1F5A5;</span> Pantalla</li>
+                <li><span class="icon">&#x2744;</span> Clima</li>
+              </ul>
+              <button class="card__btn">Reservar espacio</button>
+            </div>
+          </article>
+
+          <!-- Card 6 -->
+          <article class="card" data-type="hot-desk">
+            <div class="card__image-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1600508774634-4e11d34730e2?w=600&q=80"
+                alt="Lounge Hot Desk"
+                class="card__img"
+              />
+              <button class="card__fav" aria-label="Guardar">&#9825;</button>
+            </div>
+            <div class="card__body">
+              <div class="card__top">
+                <div>
+                  <h2 class="card__title">Lounge Hot Desk</h2>
+                  <p class="card__meta">Hot Desk &bull; 1 Persona</p>
+                </div>
+                <div class="card__price">
+                  <span class="card__amount">$4</span
+                  ><span class="card__unit">/hr</span>
+                </div>
+              </div>
+              <ul class="card__amenities">
+                <li><span class="icon">&#x1F91B;</span> Zona tranquila</li>
+                <li><span class="icon">&#x2615;</span> Café incluido</li>
+              </ul>
+              <button class="card__btn">Reservar espacio</button>
+            </div>
+          </article>
+        </div>
+      </main>
     </div>
-  </main>
-  
-  
 
+    <!-- Offcanvas móvil -->
+    <div
+      class="offcanvas offcanvas-start mobile-filters-offcanvas"
+      tabindex="-1"
+      id="mobileFilters"
+      aria-labelledby="mobileFiltersLabel"
+    >
+      <div class="offcanvas-header border-bottom">
+        <h5 class="offcanvas-title fw-bold" id="mobileFiltersLabel">Filters</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+
+      <div class="offcanvas-body p-4">
+        <!-- When -->
+        <section class="filter-block pb-4 mb-4 border-bottom">
+          <h6 class="fw-bold mb-3">When</h6>
+
+          <div class="mb-3">
+            <label
+              for="mobileDate"
+              class="form-label small fw-semibold text-secondary"
+            >
+              Date
+            </label>
+            <input
+              type="date"
+              id="mobileDate"
+              class="form-control custom-control"
+            />
+          </div>
+
+          <div class="mb-3">
+            <label
+              for="mobileStartTime"
+              class="form-label small fw-semibold text-secondary"
+            >
+              Start time
+            </label>
+            <select id="mobileStartTime" class="form-select custom-control">
+              <option selected>09:00 AM</option>
+              <option>10:00 AM</option>
+              <option>11:00 AM</option>
+              <option>12:00 PM</option>
+            </select>
+          </div>
+
+          <div>
+            <label
+              for="mobileDuration"
+              class="form-label small fw-semibold text-secondary"
+            >
+              Duration
+            </label>
+            <select id="mobileDuration" class="form-select custom-control">
+              <option selected>2 hours</option>
+              <option>1 hour</option>
+              <option>3 hours</option>
+              <option>Half day</option>
+              <option>Full day</option>
+            </select>
+          </div>
+        </section>
+
+        <!-- Space type -->
+        <section class="filter-block pb-4 mb-4 border-bottom">
+          <h6 class="fw-bold mb-3">Space type</h6>
+          <div class="d-flex flex-wrap gap-2">
+            <button type="button" class="btn filter-chip active">
+              Hot Desk
+            </button>
+            <button type="button" class="btn filter-chip">
+              Private Office
+            </button>
+            <button type="button" class="btn filter-chip">Meeting Room</button>
+            <button type="button" class="btn filter-chip">Lounge</button>
+          </div>
+        </section>
+
+        <!-- Capacity -->
+        <section class="filter-block pb-4 mb-4 border-bottom">
+          <h6 class="fw-bold mb-3">Capacity</h6>
+          <div class="d-flex flex-wrap gap-2">
+            <button type="button" class="btn filter-chip">1 person</button>
+            <button type="button" class="btn filter-chip">2–4</button>
+            <button type="button" class="btn filter-chip">5–10</button>
+            <button type="button" class="btn filter-chip">10+</button>
+          </div>
+        </section>
+
+        <!-- Amenities -->
+        <section class="filter-block pb-4 mb-4 border-bottom">
+          <h6 class="fw-bold mb-3">Amenities</h6>
+
+          <div class="row g-3">
+            <div class="col-12">
+              <div class="custom-check">
+                <input
+                  class="form-check-input custom-check-input"
+                  type="checkbox"
+                  id="mobileWifi"
+                />
+                <label
+                  class="form-check-label custom-check-label"
+                  for="mobileWifi"
+                >
+                  WiFi rápido
+                </label>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <div class="custom-check">
+                <input
+                  class="form-check-input custom-check-input"
+                  type="checkbox"
+                  id="mobileMonitor"
+                />
+                <label
+                  class="form-check-label custom-check-label"
+                  for="mobileMonitor"
+                >
+                  Monitor
+                </label>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <div class="custom-check">
+                <input
+                  class="form-check-input custom-check-input"
+                  type="checkbox"
+                  id="mobileWhiteboard"
+                />
+                <label
+                  class="form-check-label custom-check-label"
+                  for="mobileWhiteboard"
+                >
+                  Pizarra
+                </label>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <div class="custom-check">
+                <input
+                  class="form-check-input custom-check-input"
+                  type="checkbox"
+                  id="mobileCoffee"
+                />
+                <label
+                  class="form-check-label custom-check-label"
+                  for="mobileCoffee"
+                >
+                  Café
+                </label>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <div class="custom-check">
+                <input
+                  class="form-check-input custom-check-input"
+                  type="checkbox"
+                  id="mobileVideo"
+                />
+                <label
+                  class="form-check-label custom-check-label"
+                  for="mobileVideo"
+                >
+                  Videoconferencia
+                </label>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <div class="custom-check">
+                <input
+                  class="form-check-input custom-check-input"
+                  type="checkbox"
+                  id="mobileAir"
+                />
+                <label
+                  class="form-check-label custom-check-label"
+                  for="mobileAir"
+                >
+                  Aire acondicionado
+                </label>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <div class="custom-check">
+                <input
+                  class="form-check-input custom-check-input"
+                  type="checkbox"
+                  id="mobileLight"
+                />
+                <label
+                  class="form-check-label custom-check-label"
+                  for="mobileLight"
+                >
+                  Luz ajustable
+                </label>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <div class="custom-check">
+                <input
+                  class="form-check-input custom-check-input"
+                  type="checkbox"
+                  id="mobileSoundproof"
+                />
+                <label
+                  class="form-check-label custom-check-label"
+                  for="mobileSoundproof"
+                >
+                  Soundproof
+                </label>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Price -->
+        <section class="filter-block pb-4 mb-4 border-bottom">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h6 class="fw-bold mb-0">Price</h6>
+            <span class="text-primary fw-semibold">$80/hr</span>
+          </div>
+
+          <input
+            type="range"
+            class="form-range custom-range"
+            min="0"
+            max="100"
+            value="80"
+          />
+
+          <div class="row g-2 mt-2">
+            <div class="col-6">
+              <input
+                type="number"
+                class="form-control custom-control"
+                placeholder="Min"
+              />
+            </div>
+            <div class="col-6">
+              <input
+                type="number"
+                class="form-control custom-control"
+                placeholder="Max"
+              />
+            </div>
+          </div>
+        </section>
+
+        <div class="d-grid gap-2">
+          <button type="button" class="btn btn-light custom-secondary-btn">
+            Clear filters
+          </button>
+          <button type="button" class="btn btn-primary custom-primary-btn">
+            Apply filters
+          </button>
+        </div>
+      </div>
+    </div>
 
     <footer class="footer-custom">
-    <div class="footer-container pt-5 px-5">
+      <div class="footer-container pt-5 px-5">
         <div class="row align-items-start">
-            
-            <div class="col-12 col-lg-3 text-center text-lg-start mb-4">
-                <div class="d-flex align-items-center justify-content-center justify-content-lg-start mb-3">
-                    <img src="../assets/Logo.png" alt="CoWork Logo" class="logo-img me-2" style="width: 45px; height: 45px;">
-                    <h2 class="h4 fw-bold mb-0">CoWork</h2>
-                </div>
-                <p id="parrafito" class="small mb-3 description-text text-center text-lg-start">
-                    Espacios premium para la optimización del trabajo, diseñados para inspirar la innovación y optimizar el crecimiento de la comunidad.
-                </p>
-                <div class="d-flex justify-content-center justify-content-lg-start gap-3">
-                    <a href="#" class="social-link"><i class="bi bi-globe"></i></a>
-                    <a href="#" class="social-link"><i class="bi bi-browser-chrome"></i></a>
-                    <a href="#" class="social-link"><i class="bi bi-at"></i></a>
-                </div>
+          <div class="col-12 col-lg-3 text-center text-lg-start mb-4">
+            <div
+              class="d-flex align-items-center justify-content-center justify-content-lg-start mb-3"
+            >
+              <img
+                src="../assets/Logo.png"
+                alt="CoWork Logo"
+                class="logo-img me-2"
+                style="width: 45px; height: 45px"
+              />
+              <h2 class="h4 fw-bold mb-0">CoWork</h2>
             </div>
-
-            <div class="col-6 col-lg-3 text-start mb-4 ps-lg-5">
-                <h5 id="company" class="fw-bold mb-3 title-link">Company</h5>
-                <ul class="list-unstyled ps-0 custom-list">
-                    <li>About us</li>
-                    <li>Careers</li>
-                    <li>Press</li>
-                    <li>Blog</li>
-                </ul>
+            <p
+              id="parrafito"
+              class="small mb-3 description-text text-center text-lg-start"
+            >
+              Espacios premium para la optimización del trabajo, diseñados para
+              inspirar la innovación y optimizar el crecimiento de la comunidad.
+            </p>
+            <div
+              class="d-flex justify-content-center justify-content-lg-start gap-3"
+            >
+              <a href="#" class="social-link"><i class="bi bi-globe"></i></a>
+              <a href="#" class="social-link"
+                ><i class="bi bi-browser-chrome"></i
+              ></a>
+              <a href="#" class="social-link"><i class="bi bi-at"></i></a>
             </div>
+          </div>
 
-            <div class="col-6 col-lg-3 text-start mb-4">
-                <h5 id="product" class="fw-bold mb-3 title-link">Product</h5>
-                <ul class="list-unstyled ps-0 custom-list">
-                    <li>Pricing</li>
-                    <li>Locations</li>
-                    <li>Amenities</li>
-                    <li>Member Benefits</li>
-                </ul>
-            </div>
+          <div class="col-6 col-lg-3 text-start mb-4 ps-lg-5">
+            <h5 id="company" class="fw-bold mb-3 title-link">Company</h5>
+            <ul class="list-unstyled ps-0 custom-list">
+              <li>About us</li>
+              <li>Careers</li>
+              <li>Press</li>
+              <li>Blog</li>
+            </ul>
+          </div>
 
-            <div class="col-lg-3 d-none d-lg-block text-start mb-4">
-                <h5 id="support" class="fw-bold mb-3 title-link">Support</h5>
-                <ul class="list-unstyled ps-0 custom-list">
-                    <li>Contact Us</li>
-                    <li>Help Center</li>
-                    <li>Privacy Policy</li>
-                    <li>Terms of Service</li>
-                </ul>
-            </div>
+          <div class="col-6 col-lg-3 text-start mb-4">
+            <h5 id="product" class="fw-bold mb-3 title-link">Product</h5>
+            <ul class="list-unstyled ps-0 custom-list">
+              <li>Pricing</li>
+              <li>Locations</li>
+              <li>Amenities</li>
+              <li>Member Benefits</li>
+            </ul>
+          </div>
 
+          <div class="col-lg-3 d-none d-lg-block text-start mb-4">
+            <h5 id="support" class="fw-bold mb-3 title-link">Support</h5>
+            <ul class="list-unstyled ps-0 custom-list">
+              <li>Contact Us</li>
+              <li>Help Center</li>
+              <li>Privacy Policy</li>
+              <li>Terms of Service</li>
+            </ul>
+          </div>
         </div>
 
-        <hr class="mt-4 mb-4 opacity-25">
-        <p class="text-center small pb-5 copyright-text">© 2024 CoWork Spaces Inc. All rights reserved.</p>
-    </div>
+        <hr class="mt-4 mb-4 opacity-25" />
+        <p class="text-center small pb-5 copyright-text">
+          © 2024 CoWork Spaces Inc. All rights reserved.
+        </p>
+      </div>
     </footer>
-    <!--Fin footer-->    
+    <!--Fin footer-->
 
-      <!-- Bootstrap JavaScript Libraries -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
     <script src="../js/cards.js"></script>
-
-
-
-
-
-
-
-</body>
+  </body>
 </html>

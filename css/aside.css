@@ -1,0 +1,167 @@
+.spaces-layout {
+  display: flex;
+  align-items: flex-start;
+}
+
+.filters-panel {
+  width: 100%;
+  max-width: 340px;
+  position: sticky;
+  top: 88px;
+  max-height: calc(100vh - 88px);
+  overflow-y: auto;
+  border-color: #e9edf3 !important;
+  background-color: #fff;
+  flex-shrink: 0;
+}
+
+.grid-section {
+  flex: 1;
+  min-width: 0;
+}
+
+.filter-block h6 {
+  color: #0f172a;
+  font-size: 1rem;
+}
+
+.custom-control {
+  height: 50px;
+  border-radius: 14px;
+  border: 1px solid #dbe3ec;
+  font-size: 0.95rem;
+  color: #334155;
+  box-shadow: none;
+}
+
+.custom-control:focus {
+  border-color: #2f80ed;
+  box-shadow: 0 0 0 0.2rem rgba(47, 128, 237, 0.12);
+}
+
+.filter-chip {
+  border: 1px solid #dbe3ec;
+  background-color: #fff;
+  color: #334155;
+  border-radius: 999px;
+  padding: 0.55rem 0.95rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.filter-chip:hover {
+  border-color: #2f80ed;
+  color: #2f80ed;
+  background-color: #f8fbff;
+}
+
+.filter-chip.active {
+  background-color: #2f80ed;
+  border-color: #2f80ed;
+  color: #fff;
+}
+
+/* Amenities */
+.amenities-grid .col-6,
+.offcanvas .col-12 {
+  display: flex;
+}
+
+.custom-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  width: 100%;
+  margin: 0;
+  min-height: 42px;
+}
+
+.custom-check-input {
+  flex-shrink: 0;
+  width: 1rem;
+  height: 1rem;
+  margin-top: 0.2rem;
+  margin-left: 0 !important;
+  border-radius: 0.35rem;
+  border-color: #cbd5e1;
+  box-shadow: none;
+}
+
+.custom-check-input:checked {
+  background-color: #2f80ed;
+  border-color: #2f80ed;
+}
+
+.custom-check-label {
+  font-size: 0.92rem;
+  color: #334155;
+  line-height: 1.25;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  max-width: 100%;
+}
+
+.custom-range {
+  height: 1.2rem;
+}
+
+.custom-primary-btn {
+  height: 50px;
+  border-radius: 14px;
+  font-weight: 700;
+  background-color: #2f80ed;
+  border-color: #2f80ed;
+}
+
+.custom-primary-btn:hover {
+  background-color: #1f6fd6;
+  border-color: #1f6fd6;
+}
+
+.custom-secondary-btn {
+  height: 50px;
+  border-radius: 14px;
+  font-weight: 700;
+  border: 1px solid #dbe3ec;
+  background-color: #fff;
+  color: #334155;
+}
+
+.custom-secondary-btn:hover {
+  background-color: #f8fafc;
+}
+
+.mobile-toolbar {
+  background-color: #fff;
+  border-bottom: 1px solid #e9edf3;
+}
+
+.mobile-filter-btn {
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+.mobile-filters-offcanvas {
+  width: min(90vw, 380px);
+}
+
+.mobile-filters-offcanvas .offcanvas-header,
+.mobile-filters-offcanvas .offcanvas-body {
+  background-color: #fff;
+}
+
+/* Tablet y mobile */
+@media (max-width: 991.98px) {
+  .spaces-layout {
+    display: block;
+  }
+
+  .grid-section {
+    width: 100%;
+  }
+
+  .amenities-grid > .col-6 {
+    width: 100%;
+  }
+}
