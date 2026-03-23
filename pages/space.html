@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../assets/styles.css">
-    <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="../css/cards.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/navbar.css" />
+    <link rel="stylesheet" href="../css/aside.css" />
+    <link rel="stylesheet" href="../assets/styles.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="../css/cards.css" />
     <title>Space</title>
 </head>
 <body>
@@ -17,12 +27,289 @@
   <main class="grid-section">
     <div class="cards-grid" id="cardsGrid">
 
-      <!-- Card 1 -->
-      <article class="card" data-type="private">
-        <div class="card__image-wrap">
-          <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80" alt="Executive Suite 402" class="card__img" />
-          <span class="card__badge card__badge--available">Disponible hoy</span>
-          <button class="card__fav" aria-label="Guardar">&#9825;</button>
+  <body>
+        <!--  Inicio Navbar -->         
+    <header>
+  <nav class="navbar navbar-expand-lg py-2 py-md-1 py-lg-3 shadow fixed-top">
+    <div class="container-fluid">
+      
+      <a href="index.html" class="title d-flex align-items-center text-decoration-none">
+        <img class="logo d-inline-block align-top" src="../assets/Logo.png" alt="Logo WorkHub Coworking">
+        <h2 class="title-text fw-bold fs-5 mb-0 ">CoWork</h2>
+      </a>
+
+      <!-- Solo móvil -->
+      <div class="d-flex align-items-center gap-2 d-lg-none">
+  <a href="./pages/login.html" class="btn btn-login rounded-pill fw-bold">Login</a>
+  <button class="navbar-toggler border-0 shadow-none me-2" type="button"
+    data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+</div>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- Links centrados -->
+        <ul class="navbar-nav ms-auto gap-lg-5">
+          <li class="nav-item mx-lg-2">
+            <a class="nav-link" href="pages/space.html">Spaces</a>
+          </li>
+          <li class="nav-item mx-lg-2">
+            <a class="nav-link" href="#">Amenities</a>
+          </li>
+          <li class="nav-item mx-lg-2">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+          <li class="nav-item mx-lg-2">
+            <a class="nav-link" href="#">About</a>
+          </li>
+        </ul>
+
+        <!-- Solo escritorio -->
+        <a href="./pages/login.html" class="btn btn-login rounded-pill fw-bold d-none d-lg-inline-block ms-5 me-5">Login</a>
+      </div>
+    </div>
+  </nav>
+</header>
+    <!-- Fin Navbar -->
+    <div class="spaces-layout">
+      <!-- Aside desktop -->
+      <aside class="filters-panel bg-white border-end p-4 d-none d-lg-block">
+        <h4 class="fw-bold mb-4">Filters</h4>
+
+        <!-- When -->
+        <section class="filter-block pb-4 mb-4 border-bottom">
+          <h6 class="fw-bold mb-3">When</h6>
+
+          <div class="mb-3">
+            <label
+              for="date"
+              class="form-label small fw-semibold text-secondary"
+            >
+              Date
+            </label>
+            <input type="date" id="date" class="form-control custom-control" />
+          </div>
+
+          <div class="mb-3">
+            <label
+              for="startTime"
+              class="form-label small fw-semibold text-secondary"
+            >
+              Start time
+            </label>
+            <select id="startTime" class="form-select custom-control">
+              <option selected>09:00 AM</option>
+              <option>10:00 AM</option>
+              <option>11:00 AM</option>
+              <option>12:00 PM</option>
+            </select>
+          </div>
+
+          <div>
+            <label
+              for="duration"
+              class="form-label small fw-semibold text-secondary"
+            >
+              Duration
+            </label>
+            <select id="duration" class="form-select custom-control">
+              <option selected>2 hours</option>
+              <option>1 hour</option>
+              <option>3 hours</option>
+              <option>Half day</option>
+              <option>Full day</option>
+            </select>
+          </div>
+        </section>
+
+        <!-- Space type -->
+        <section class="filter-block pb-4 mb-4 border-bottom">
+          <h6 class="fw-bold mb-3">Space type</h6>
+          <div class="d-flex flex-wrap gap-2">
+            <button type="button" class="btn filter-chip active">
+              Hot Desk
+            </button>
+            <button type="button" class="btn filter-chip">
+              Private Office
+            </button>
+            <button type="button" class="btn filter-chip">Meeting Room</button>
+            <button type="button" class="btn filter-chip">Lounge</button>
+          </div>
+        </section>
+
+        <!-- Capacity -->
+        <section class="filter-block pb-4 mb-4 border-bottom">
+          <h6 class="fw-bold mb-3">Capacity</h6>
+          <div class="d-flex flex-wrap gap-2">
+            <button type="button" class="btn filter-chip">1 person</button>
+            <button type="button" class="btn filter-chip">2–4</button>
+            <button type="button" class="btn filter-chip">5–10</button>
+            <button type="button" class="btn filter-chip">10+</button>
+          </div>
+        </section>
+
+        <!-- Amenities -->
+        <section class="filter-block pb-4 mb-4 border-bottom">
+          <h6 class="fw-bold mb-3">Amenities</h6>
+
+          <div class="row g-3 amenities-grid">
+            <div class="col-6">
+              <div class="custom-check">
+                <input
+                  class="form-check-input custom-check-input"
+                  type="checkbox"
+                  id="wifi"
+                />
+                <label class="form-check-label custom-check-label" for="wifi">
+                  WiFi rápido
+                </label>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div class="custom-check">
+                <input
+                  class="form-check-input custom-check-input"
+                  type="checkbox"
+                  id="monitor"
+                />
+                <label
+                  class="form-check-label custom-check-label"
+                  for="monitor"
+                >
+                  Monitor
+                </label>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div class="custom-check">
+                <input
+                  class="form-check-input custom-check-input"
+                  type="checkbox"
+                  id="whiteboard"
+                />
+                <label
+                  class="form-check-label custom-check-label"
+                  for="whiteboard"
+                >
+                  Pizarra
+                </label>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div class="custom-check">
+                <input
+                  class="form-check-input custom-check-input"
+                  type="checkbox"
+                  id="coffee"
+                />
+                <label class="form-check-label custom-check-label" for="coffee">
+                  Café
+                </label>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div class="custom-check">
+                <input
+                  class="form-check-input custom-check-input"
+                  type="checkbox"
+                  id="video"
+                />
+                <label class="form-check-label custom-check-label" for="video">
+                  Videoconferencia
+                </label>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div class="custom-check">
+                <input
+                  class="form-check-input custom-check-input"
+                  type="checkbox"
+                  id="air"
+                />
+                <label class="form-check-label custom-check-label" for="air">
+                  Aire acondicionado
+                </label>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div class="custom-check">
+                <input
+                  class="form-check-input custom-check-input"
+                  type="checkbox"
+                  id="light"
+                />
+                <label class="form-check-label custom-check-label" for="light">
+                  Luz ajustable
+                </label>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div class="custom-check">
+                <input
+                  class="form-check-input custom-check-input"
+                  type="checkbox"
+                  id="soundproof"
+                />
+                <label
+                  class="form-check-label custom-check-label"
+                  for="soundproof"
+                >
+                  Soundproof
+                </label>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Price -->
+        <section class="filter-block pb-4 mb-4 border-bottom">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h6 class="fw-bold mb-0">Price</h6>
+            <span class="text-primary fw-semibold">$80/hr</span>
+          </div>
+
+          <input
+            type="range"
+            class="form-range custom-range"
+            min="0"
+            max="100"
+            value="80"
+          />
+
+          <div class="row g-2 mt-2">
+            <div class="col-6">
+              <input
+                type="number"
+                class="form-control custom-control"
+                placeholder="Min"
+              />
+            </div>
+            <div class="col-6">
+              <input
+                type="number"
+                class="form-control custom-control"
+                placeholder="Max"
+              />
+            </div>
+          </div>
+        </section>
+
+        <!-- Actions -->
+        <div class="d-grid gap-2">
+          <button type="button" class="btn btn-light custom-secondary-btn">
+            Clear filters
+          </button>
+          <button type="button" class="btn btn-primary custom-primary-btn">
+            Apply filters
+          </button>
         </div>
         <div class="card__body">
           <div class="card__top">
