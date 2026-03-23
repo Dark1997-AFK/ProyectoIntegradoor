@@ -11,7 +11,7 @@
 </head>
 <body class="">
     <header>
-  <nav class="navbar navbar-expand-lg py-2 py-md-1 py-lg-3 mb-3 shadow-sm">
+   <nav class="navbar navbar-expand-lg py-2 py-md-1 py-lg-3 mb-3 shadow-sm">
     <div class="container-fluid">
       
       <a href="../index.html" class="title d-flex align-items-center text-decoration-none">
@@ -52,16 +52,24 @@
     </div>
   </nav>
 </header>
-    <section class="d-flex mx-auto">
-        <img src="../assets/Logo.png" alt="CoWork Logo" class="img-fluid">
-        <h2 class="fw-bold fs-5">CoWork</h2>
+    <section class="d-flex mx-auto align-items-center my-4 d-lg-none" style="gap: 12px;">
+        <img src="../assets/Logo.png" alt="CoWork Logo" class="img-fluid" style="width: 44px; height: 44px;">
+        <h2 class="fw-bold fs-5 mb-0">CoWork</h2>
     </section>
-     <main class="mx-auto">
-        <h1 class="fw-bold">Welcome Back</h1>
-        <h3 class="fw-normal fs-6">Please enter your details to access your dashboard.</h3>
-    </main>
-     <div class="container p-0">
-        <div class="form-container">
+    <div class="login-page-wrapper">
+        <div class="row g-0 w-100 h-100 m-0">
+            <div class="col-12 col-lg-6 coworking-side d-flex align-items-center justify-content-center p-3 p-lg-0">
+                <div class="coworking-card">
+                    <h3 class="fw-bold">Bienvenido a CoWork</h3>
+                    <p class="text-muted mb-0">Espacios de coworking inspiradores para equipos y freelancers. Reserva tu mesa, oficina privada o sala de reuniones y crece en comunidad.</p>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6 d-flex flex-column align-items-center justify-content-center p-3 p-lg-4" style="background-color: #f5f7fa;">
+                <div class="form-container">
+                    <div class="login-hero mb-4">
+                        <h1 class="fw-bold">Welcome Back</h1>
+                        <h3 class="fw-normal">Please enter your details to access your dashboard.</h3>
+                    </div>
             <form id="loginForm" action="">
                 <div class="mb-3">
                     <label for="email" class="form-label fw-medium small">Email Address</label>
@@ -102,9 +110,11 @@
                 <span class="fw-regular create-account-text">Don't have an account?</span>
                 <a href="" class="text-decoration-none fw-bold">Create an account</a>
             </div>
+            </form>
+            </div>
         </div>
-     </div> 
-     <!-- Footer -->
+    </div> <!-- close login-page-wrapper -->
+    <!-- Footer -->
      <footer class="footer-custom pt-5">
     <div class="container">
         <div class="row align-items-start">
