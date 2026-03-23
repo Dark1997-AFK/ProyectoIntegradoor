@@ -192,3 +192,160 @@ h3,h1,p,a,label, span{
         color: #64748B;
         font-size: 1rem;
     }
+
+    /* ===== MOBILE-FIRST LOGIN LAYOUT ===== */
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        position: relative;
+        z-index: 100;
+    }
+
+   .login-page-wrapper {
+    min-height: 100vh;
+     }
+
+    .row.w-100.h-100 {
+        width: 100% !important;
+        height: auto !important;
+        flex-wrap: wrap;
+        margin: 0 !important;
+    }
+
+    /* Mobile: Imagen oculta */
+    .coworking-side {
+        display: none;
+        
+    }
+
+    .coworking-card {
+        width: 100%;
+        max-width: 100%;
+        padding: 1.5rem;
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 1rem;
+        text-align: center;
+    }
+
+    .coworking-card img {
+        display: none;
+    }
+
+    .coworking-card h3 {
+        color: #1D76E2;
+        font-size: 1.25rem;
+        margin-bottom: 0.75rem;
+        margin-top: 0;
+    }
+
+    .coworking-card p {
+        color: #475569;
+        font-size: 0.9rem;
+        line-height: 1.5;
+        margin: 0;
+    }
+
+    
+
+    .form-container {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .login-hero {
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+
+    .login-hero h1 {
+        font-size: 1.5rem;
+        color: #1E293B;
+        margin-bottom: 0.5rem;
+        font-weight: 700;
+    }
+
+    .login-hero h3 {
+        font-size: 0.875rem;
+        color: #64748B;
+        font-weight: 400;
+        margin: 0;
+    }
+
+    /* Desktop: 50/50 split */
+    @media (min-width: 992px) {
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: #F8FAFC;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        body {
+            padding-top: 70px;
+        }
+
+        
+
+        .row.w-100.h-100 {
+            width: 100vw !important;
+            height: 100% !important;
+            flex-wrap: nowrap;
+            display: flex !important;
+        }
+
+        /* Imagen lado izquierdo - 50% */
+        .coworking-side {
+            display: flex !important;
+            background-image: url('../resources/coworking.jpg');
+            background-size: cover;
+            background-position: center;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .coworking-card {
+            width: 100%;
+            max-width: 500px;
+            padding: 2.5rem;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 1.25rem;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            text-align: center;
+        }
+
+        .coworking-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .coworking-card p {
+            font-size: 0.95rem;
+        }
+
+      
+
+        .form-container {
+            width: 100%;
+            max-width: 420px;
+        }
+
+        .login-hero {
+            text-align: left;
+            margin-bottom: 2rem;
+        }
+
+        .login-hero h1 {
+            font-size: 2.2rem;
+            text-align: left;
+        }
+
+        .login-hero h3 {
+            font-size: 0.95rem;
+            text-align: left;
+        }
+    }
