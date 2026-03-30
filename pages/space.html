@@ -14,6 +14,7 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"
     />
     <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/navbar.css" />
     <link rel="stylesheet" href="../css/aside.css" />
     <link rel="stylesheet" href="../assets/styles.css" />
     <link rel="stylesheet" href="../css/footer.css" />
@@ -22,6 +23,110 @@
   </head>
 
   <body>
+
+     <!--  Inicio Navbar -->
+  <header>
+    <nav class="navbar navbar-expand-lg py-2 py-md-1 py-lg-3 shadow fixed-top">
+      <div class="container-fluid">
+
+        <a href="index.html" class="title d-flex align-items-center text-decoration-none">
+          <img class="logo d-inline-block align-top" src="../assets/logo.png" alt="Logo WorkHub Coworking">
+          <h2 class="title-text fw-bold fs-5 mb-0 ">CoWork</h2>
+        </a>
+
+        <!-- Solo móvil -->
+        <div class="d-flex align-items-center gap-2 d-lg-none">
+          <a href="./pages/login.html" class="btn btn-login rounded-pill fw-bold">Login</a>
+          <button class="navbar-toggler border-0 shadow-none me-2" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <!-- Links centrados -->
+          <ul class="navbar-nav ms-auto gap-lg-5">
+            <li class="nav-item mx-lg-2">
+              <a class="nav-link" href="pages/space.html">Spaces</a>
+            </li>
+            <li class="nav-item mx-lg-2">
+              <a class="nav-link" href="#">Amenities</a>
+            </li>
+            <li class="nav-item mx-lg-2">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>
+            <li class="nav-item mx-lg-2">
+              <a class="nav-link" href="#">About</a>
+            </li>
+          </ul>
+
+          <!-- Solo escritorio -->
+          <div class="d-flex align-items-center gap-2 d-lg-none">
+            <button class="btn btn-notifications rounded-pill border-0 position-relative p-2" type="button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bell-fill"
+                viewBox="0 0 16 16">
+                <path
+                  d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2m.995-14.901a1 1 0 1 0-1.99 0A5 5 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901" />
+              </svg>
+              <span
+                class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle">
+                <span class="visually-hidden">New notifications</span>
+              </span>
+            </button>
+
+            <a href="./pages/perfil.html" class="avatar-user ms-2">
+              <img src="https://via.placeholder.com/150" alt="Avatar Usuario" class="rounded-circle"
+                style="width: 35px; height: 35px; object-fit: cover;">
+            </a>
+
+            <button class="navbar-toggler border-0 shadow-none me-2" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+
+          <div class="d-flex align-items-center gap-3 ms-auto d-none d-lg-flex pe-lg-4">
+            <button class="btn btn-notifications rounded-pill border-0 position-relative p-2" type="button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-bell-fill"
+                viewBox="0 0 16 16">
+                <path
+                  d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2m.995-14.901a1 1 0 1 0-1.99 0A5 5 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901" />
+              </svg>
+              <span
+                class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle">
+                <span class="visually-hidden">New notifications</span>
+              </span>
+            </button>
+
+            <div class="dropdown">
+              <a href="#" class="d-flex align-items-center text-decoration-none dropdown-toggle user-dropdown-link"
+                id="dropdownUser" data-bs-toggle="dropdown" aria-expanded="false">
+                <div class="avatar-user me-2">
+                  <i class="bi bi-person-circle"></i>
+                </div>
+                <div class="user-info">
+                  <span class="user-name fw-semibold d-block">Sebastian Quero</span>
+                  <span class="user-role text-muted" style="font-size: 0.75rem;">Miembro de WorkHub</span>
+                </div>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end shadow border-0 mt-2" aria-labelledby="dropdownUser">
+                <li><a class="dropdown-item" href="#">Mi Perfil</a></li>
+                <li><a class="dropdown-item" href="#">Reservas</a></li>
+                <li><a class="dropdown-item" href="#">Pagos</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item text-danger" href="#">Cerrar Sesión</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- Fin Navbar -->
     <div class="spaces-layout">
       <!-- Aside desktop -->
       <aside class="filters-panel bg-white border-end p-4 d-none d-lg-block">
