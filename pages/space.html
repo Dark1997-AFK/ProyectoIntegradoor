@@ -18,10 +18,98 @@
     <link rel="stylesheet" href="../assets/styles.css" />
     <link rel="stylesheet" href="../css/footer.css" />
     <link rel="stylesheet" href="../css/cards.css" />
+    <link rel="stylesheet" href="../css/space-mobile-hero.css">
     <title>Space</title>
   </head>
 
   <body>
+        <!-- Mobile hero -->
+    <header class="space-hero" aria-label="Buscador de espacios">
+      <div class="space-hero__inner">
+        <div class="space-hero__top">
+          <div class="space-hero__heading">
+            <h1 class="space-hero__title">Find Your Space</h1>
+            <p class="space-hero__subtitle">Discover your next workspace</p>
+          </div>
+
+          <button class="space-hero__bell" type="button" aria-label="Notificaciones">
+            <svg
+              class="space-hero__icon"
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path
+                d="M12 22a2.2 2.2 0 0 0 2.2-2.2h-4.4A2.2 2.2 0 0 0 12 22Zm7-6V11a7 7 0 0 0-5.2-6.8V3a1.8 1.8 0 0 0-3.6 0v1.2A7 7 0 0 0 5 11v5l-1.6 1.6c-.3.3-.1.8.3.8h16.6c.4 0 .6-.5.3-.8L19 16Z"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <form class="space-hero__search" role="search" aria-label="Buscar por ubicación o nombre">
+          <span class="space-hero__search-icon" aria-hidden="true">
+            <svg
+              class="space-hero__icon"
+              viewBox="0 0 24 24"
+              width="22"
+              height="22"
+              focusable="false"
+              aria-hidden="true"
+            >
+              <path
+                d="M10.5 18.5a8 8 0 1 1 0-16 8 8 0 0 1 0 16Z"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+              <path
+                d="M16.8 16.8 21 21"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+          </span>
+
+          <label class="sr-only" for="spaceSearchInput">Buscar</label>
+          <input
+            id="spaceSearchInput"
+            class="space-hero__input"
+            type="search"
+            placeholder="Search by location or name..."
+            autocomplete="off"
+          />
+
+          <button class="space-hero__filter" type="button" aria-label="Abrir filtros">
+            <svg
+              class="space-hero__icon space-hero__icon--blue"
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+              focusable="false"
+              aria-hidden="true"
+            >
+              <path
+                d="M10 6h11M3 6h3m4 0a2 2 0 1 0 0 .01M14 12h7M3 12h8m3 0a2 2 0 1 0 0 .01M8 18h13M3 18h2m3 0a2 2 0 1 0 0 .01"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+          </button>
+        </form>
+      </div>
+    </header>
+
     <div class="spaces-layout">
       <!-- Aside desktop -->
       <aside class="filters-panel bg-white border-end p-4 d-none d-lg-block">
