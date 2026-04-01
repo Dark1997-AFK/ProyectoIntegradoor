@@ -1,60 +1,157 @@
 // =====================================================
-// CAROUSEL
+// CAROUSEL SIN CLONES + AUTOPLAY
 // =====================================================
 
 const carousel = {
+  grid: document.getElementById("spacesGrid"),
+  cards: document.querySelectorAll(".space-card"),
+  prevBtn: document.querySelector(".carousel-btn.prev"),
+  nextBtn: document.querySelector(".carousel-btn.next"),
 
-    grid: document.getElementById('spacesGrid'),
-    cards: document.querySelectorAll('.space-card'),
-    dots: document.querySelectorAll('.carousel-dot'),
-    prevBtn: document.querySelector('.carousel-btn.prev'),
-    nextBtn: document.querySelector('.carousel-btn.next'),
-    current: 0,
+  current: 0,
+  autoPlayInterval: null,
+  autoPlayDelay: 3000,
+  userInteracted: false,
 
-    isMobile() {
-        return window.innerWidth < 768;
-    },
+  isMobile() {
+    return window.innerWidth < 768;
+  },
 
-    goTo(index) {
-        if (!this.isMobile()) return;
-        this.current = Math.max(0, Math.min(index, this.cards.length - 1));
-        this.grid.scrollTo({
-            left: (this.cards[0].offsetWidth + 20) * this.current,
-            behavior: 'smooth'
-        });
-        this.updateDots();
-    },
+  getGap() {
+    return 20;
+  },
 
-    updateDots() {
-        this.dots.forEach((dot, i) =>
-            dot.classList.toggle('active', i === this.current)
-        );
-    },
+  getCardWidth() {
+    return this.cards.length ? this.cards[0].offsetWidth : 0;
+  },
 
-    syncOnScroll() {
-        if (!this.isMobile()) return;
-        const index = Math.round(
-            this.grid.scrollLeft / (this.cards[0].offsetWidth + 20)
-        );
-        if (index !== this.current) {
-            this.current = index;
-            this.updateDots();
-        }
-    },
+  getStep() {
+    return this.getCardWidth() + this.getGap();
+  },
 
-    init() {
-        this.prevBtn.addEventListener('click', () => this.goTo(this.current - 1));
-        this.nextBtn.addEventListener('click', () => this.goTo(this.current + 1));
-        this.dots.forEach(dot =>
-            dot.addEventListener('click', () => this.goTo(+dot.dataset.index))
-        );
-        this.grid.addEventListener('scroll', () => this.syncOnScroll());
+  getMaxIndex() {
+    return this.cards.length - 1;
+  },
+
+  goTo(index, behavior = "smooth") {
+    if (!this.grid || !this.cards.length) return;
+
+    this.current = Math.max(0, Math.min(index, this.getMaxIndex()));
+
+    this.grid.scrollTo({
+      left: this.getStep() * this.current,
+      behavior,
+    });
+  },
+
+  next() {
+    if (!this.cards.length) return;
+
+    if (this.current >= this.getMaxIndex()) {
+      this.current = 0;
+    } else {
+      this.current += 1;
     }
 
+    this.goTo(this.current);
+  },
+
+  prev() {
+    if (!this.cards.length) return;
+
+    if (this.current <= 0) {
+      this.current = this.getMaxIndex();
+    } else {
+      this.current -= 1;
+    }
+
+    this.goTo(this.current);
+  },
+
+  syncOnScroll() {
+    if (!this.grid || !this.cards.length) return;
+
+    const index = Math.round(this.grid.scrollLeft / this.getStep());
+    this.current = Math.max(0, Math.min(index, this.getMaxIndex()));
+  },
+
+  startAutoPlay() {
+    this.stopAutoPlay();
+
+    this.autoPlayInterval = setInterval(() => {
+      this.next();
+    }, this.autoPlayDelay);
+  },
+
+  stopAutoPlay() {
+    if (this.autoPlayInterval) {
+      clearInterval(this.autoPlayInterval);
+      this.autoPlayInterval = null;
+    }
+  },
+
+  restartAutoPlay() {
+    this.stopAutoPlay();
+    this.startAutoPlay();
+  },
+
+  bindEvents() {
+    if (this.prevBtn) {
+      this.prevBtn.addEventListener("click", () => {
+        this.userInteracted = true;
+        this.prev();
+        this.restartAutoPlay();
+      });
+    }
+
+    if (this.nextBtn) {
+      this.nextBtn.addEventListener("click", () => {
+        this.userInteracted = true;
+        this.next();
+        this.restartAutoPlay();
+      });
+    }
+
+    let scrollTimeout;
+
+    this.grid.addEventListener("scroll", () => {
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(() => {
+        this.userInteracted = true;
+        this.syncOnScroll();
+      }, 100);
+    });
+
+    this.grid.addEventListener("mouseenter", () => this.stopAutoPlay());
+    this.grid.addEventListener("mouseleave", () => this.startAutoPlay());
+
+    this.grid.addEventListener("touchstart", () => this.stopAutoPlay(), {
+      passive: true,
+    });
+
+    this.grid.addEventListener("touchend", () => {
+      this.userInteracted = true;
+      this.syncOnScroll();
+      this.startAutoPlay();
+    });
+
+    window.addEventListener("resize", () => {
+      this.goTo(this.current, "auto");
+    });
+  },
+
+  init() {
+    if (!this.grid || !this.cards.length) return;
+
+    this.goTo(0, "auto");
+    this.bindEvents();
+    this.startAutoPlay();
+  },
 };
 
-carousel.init();
-
+document.addEventListener("DOMContentLoaded", () => {
+  carousel.init();
+});
 
 // =====================================================
 // COUNTERS
@@ -62,22 +159,21 @@ carousel.init();
 
 const counters = document.querySelectorAll(".counter");
 
-counters.forEach(counter => {
+counters.forEach((counter) => {
+  const target = +counter.getAttribute("data-target");
+  let count = 0;
+  const increment = target / 100;
 
-    let target = +counter.getAttribute("data-target");
-    let count = 0;
-    let increment = target / 100;
+  function updateCounter() {
+    count += increment;
 
-    function updateCounter() {
-        count += increment;
-        if (count < target) {
-            counter.innerText = Math.floor(count);
-            requestAnimationFrame(updateCounter);
-        } else {
-            counter.innerText = target;
-        }
+    if (count < target) {
+      counter.innerText = Math.floor(count);
+      requestAnimationFrame(updateCounter);
+    } else {
+      counter.innerText = target;
     }
+  }
 
-    updateCounter();
-
+  updateCounter();
 });
